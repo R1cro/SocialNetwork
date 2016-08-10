@@ -149,3 +149,485 @@ puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
   Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
   Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (25.8ms)
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:43:54 +0300
+  
+AbstractController::ActionNotFound (The action 'home' could not be found for ApplicationController):
+  
+actionpack (5.0.0) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (3.3ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (25.8ms)
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:44:25 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 156ms (Views: 149.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:46:11 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:47:33 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/help.html.erb" for 127.0.0.1 at 2016-08-10 19:47:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/help.html.erb"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (1.6ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (29.2ms)
+Started GET "/help.html.erb" for 127.0.0.1 at 2016-08-10 19:47:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/help.html.erb"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendered collection of /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (0.8ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (20.8ms)
+Started GET "/help.html.erb" for 127.0.0.1 at 2016-08-10 19:47:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/help.html.erb"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered collection of /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (0.8ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.3ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (20.6ms)
+Started GET "/help.html.erb" for 127.0.0.1 at 2016-08-10 19:48:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/help.html.erb"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered collection of /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (0.8ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.5ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.5ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (20.1ms)
+Started GET "/help.html.erb" for 127.0.0.1 at 2016-08-10 19:48:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/help.html.erb"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered collection of /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (0.8ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.0ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.3ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (21.7ms)
+Started GET "/help.html.erb" for 127.0.0.1 at 2016-08-10 19:48:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/help.html.erb"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.6ms)
+  Rendered collection of /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (0.8ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.6ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.7ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.6ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (20.8ms)
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:48:36 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:48:37 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/landing_pages" for 127.0.0.1 at 2016-08-10 19:48:38 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/landing_pages"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [3 times] (1.0ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.4ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.2ms)
+  Rendering /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/qulix.com/teseykoas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (21.8ms)
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:48:41 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-08-10 19:48:50 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/landing_pages/help" for 127.0.0.1 at 2016-08-10 19:48:51 +0300
+Processing by LandingPagesController#help as HTML
+  Rendering landing_pages/help.html.erb within layouts/application
+  Rendered landing_pages/help.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
