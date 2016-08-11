@@ -15,10 +15,10 @@
 /log/*
 !/log/.keep
 /tmp
-.idea/workspace.x
+
+
 cache/
 avatars/
 .sass-cache
+.idea/
 
-.idea
-.gitignore
