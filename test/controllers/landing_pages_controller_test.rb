@@ -16,5 +16,10 @@ class LandingPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get contact" do
+    get landing_pages_contact_url
+    assert_response :success
+  end
+
 
 end
