@@ -631,3 +631,10 @@ Processing by LandingPagesController#help as HTML
 Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-08-11 10:55:14 +0300
+Processing by LandingPagesController#home as HTML
+  Rendering landing_pages/home.html.erb within layouts/application
+  Rendered landing_pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 197ms (Views: 187.9ms | ActiveRecord: 0.0ms)
+
+
