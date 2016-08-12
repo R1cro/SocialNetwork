@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
-
   root 'landing_pages#home'
   get  '/help',    to: 'landing_pages#help'
   get  '/about',   to: 'landing_pages#about'
