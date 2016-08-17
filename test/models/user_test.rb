@@ -2,16 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   def setup
-    @user = User.new(nickname: "Example User", email: "user@example.com")
-  end
-
-  test "should be valid" do
-    assert @user.valid?
-  end
-
-  test "nickname should be present" do
-    @user.nickname = "     "
-    assert_not @user.valid?
+    @user = User.new(email: "user@example.com")
   end
 
   test "email should be present" do
@@ -26,18 +17,6 @@ class UserTest < ActiveSupport::TestCase
       @user.email = invalid_address
       assert_not @user.valid?, "#{invalid_address.inspect} should be valid"
     end
-  end
-
-  test "valid signup information" do
-    get signup_path
-    assert_difference 'User.count', 1 do
-      post users_path, params: { user: { nickname:  "Example User",
-                                         email: "user@example.com",
-                                         password:              "password",
-                                         password_confirmation: "password" } }
-    end
-    follow_redirect!
-    assert_template 'users/show'
   end
 
 end

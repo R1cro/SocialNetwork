@@ -1,4 +1,6 @@
 class LandingPagesController < ApplicationController
+  before_action :redirect_to_profile, only: :home
+
   def home
   end
 
@@ -10,4 +12,10 @@ class LandingPagesController < ApplicationController
 
   def contact
   end
+  private
+    def redirect_to_profile
+      if current_user != nil
+        redirect_to current_user
+      end
+    end
 end

@@ -169,9 +169,10 @@ aside {
 }
 
 .alert {
-  font-family: 'Oswald', sans-serif;
   color: darken(#e7e7e7, 40%);
+  text-align: center;
 }
+
 #show_row.row {
   font-family: 'Oswald', sans-serif;
   color: darken(#e7e7e7, 40%);
@@ -199,4 +200,16 @@ aside {
     font-family: 'Oswald', sans-serif;
     color: $state-danger-text;
   }
+}
+
+#new-user {
+  margin-top: 10px;
+  font-size: small;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+.dropdown-toggle {
+  font-family: 'Oswald';
+  text-transform: uppercase;
 }
