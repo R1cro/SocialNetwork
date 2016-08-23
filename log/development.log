@@ -19394,3 +19394,13 @@ Processing by LandingPagesController#about as HTML
 Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/login" for 127.0.0.1 at 2016-08-17 20:38:54 +0300
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980190964], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
