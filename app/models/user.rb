@@ -5,14 +5,13 @@ class User < ApplicationRecord
   attr_accessor :remember_token
 
   before_save { email.downcase! }
-  # validates :nickname, presence: true, length: { maximum: 15 },
-  #                                      uniqueness: { case_sensitive: false }
+
   validates :email, presence: true, length: { maximum: 40 },
                                     format: { with: VALID_EMAIL_REGEX },
                                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence:  true, length: { minimum: 6 },
-                                    format: { with: PASSWORD_FORMAT }
+                                    format: { with: PASSWORD_FORMAT },  allow_nil: true
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
