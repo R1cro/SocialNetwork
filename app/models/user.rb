@@ -52,4 +52,9 @@ class User < ApplicationRecord
     UserMailer.forgot_password(self).deliver
   end
 
+  def password_reset_expired?
+    forgot_password_at < 30.seconds.ago
+  end
+
+
 end

@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_all_params)
+    @user = User.new(user_create_params)
     if @user.save
       log_in @user
       flash[:success] = "Welcome to the Social Network!"
@@ -33,11 +33,12 @@ class UsersController < ApplicationController
   end
 
   private
-  def user_all_params
+  def user_create_params
     params.require(:user).permit(:nickname, :email, :password, :password_confirmation)
   end
 
+
   def user_profile_params
-    user_all_params.except(:email)
+    params.require(:user).permit(:first_name, :second_name, :birthday, :city, :password, :password_confirmation)
   end
 end
