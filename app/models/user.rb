@@ -53,7 +53,7 @@ class User < ApplicationRecord
   end
 
   def password_reset_expired?
-    forgot_password_at < 30.seconds.ago
+    forgot_password_at < 20.minutes.ago
   end
 
   def age(birthday)
