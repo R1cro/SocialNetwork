@@ -2,9 +2,11 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   PASSWORD_FORMAT = /\A(?=.*\d)/i
 
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :reset_token
+
 
   before_save { email.downcase! }
+
 
   validates :email, presence: true, length: { maximum: 40 },
                                     format: { with: VALID_EMAIL_REGEX },
@@ -38,6 +40,16 @@ class User < ApplicationRecord
 
   def forget
     update_attribute(:remember_digest, nil)
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_attribute(:reset_digest,  User.digest(reset_token))
+    update_attribute(:forgot_password_at, Time.zone.now)
+  end
+
+  def send_password_reset_email
+    UserMailer.forgot_password(self).deliver
   end
 
 end

@@ -169,7 +169,6 @@ aside {
 }
 
 .alert {
-  color: darken(#e7e7e7, 40%);
   text-align: center;
 }
 
@@ -240,4 +239,11 @@ aside {
 
 .personal-field {
   padding-top: 30px
+}
+
+.forgot-password {
+  float: right;
+  padding-right: 10px;
+  font-size: 0.8em;
+  text-decoration: underline;
 }
