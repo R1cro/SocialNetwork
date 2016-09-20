@@ -247,3 +247,15 @@ aside {
   font-size: 0.8em;
   text-decoration: underline;
 }
+
+.users {
+  list-style: none;
+  li {
+    overflow: auto;
+    padding: 20px 0;
+    border-top: 1px solid #e7e7e7;
+    &:last-child {
+      border-bottom: 1px solid #e7e7e7;
+    }
+  }
+}
