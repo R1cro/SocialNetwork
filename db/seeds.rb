@@ -8,12 +8,15 @@
 
 User.create!(email: "example@example.com",
              password:              "12345678",
-             password_confirmation: "12345678")
-
-10.times do |n|
+             password_confirmation: "12345678",
+             activated: true,
+             activated_at: Time.zone.now)
+5.times do |n|
   email = "example-#{n+1}@example.com"
   password = "12345678"
   User.create!(email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end
