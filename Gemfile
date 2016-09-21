@@ -11,6 +11,8 @@ gem 'turbolinks',   '5.0.0'
 gem 'jbuilder',     '2.4.1'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'will_paginate', '~> 3.1', '>= 3.1.3'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 
 group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri
