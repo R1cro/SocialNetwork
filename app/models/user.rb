@@ -29,13 +29,6 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, User.digest(remember_token))
   end
 
-  # def authenticated?(remember_token)
-  #   if remember_digest.nil?
-  #     false
-  #   else
-  #     BCrypt::Password.new(remember_digest).is_password?(remember_token)
-  #   end
-  # end
   def authenticated?(attribute, token)
     digest = self.send("#{attribute}_digest")
     if digest.nil?
@@ -75,7 +68,6 @@ class User < ApplicationRecord
   def downcase_email
     self.email = email.downcase
   end
-
 
   def create_activation_digest
     self.activation_token  = User.new_token
