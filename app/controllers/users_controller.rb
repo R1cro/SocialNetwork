@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update]
+
+  before_action :logged_in_user, only: [:edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
+  before_action :admin_user,     only: :destroy
 
   def index
     @users = User.paginate(page: params[:page], :per_page => 4)
@@ -18,6 +20,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
+  end
+
+
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_profile_params)
@@ -31,6 +40,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_create_params)
     if @user.save
+      profile_info
       send_activation_mail
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
@@ -47,9 +57,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def profile_info
+    @user.update_attributes(first_name: nil, second_name: nil, birthday: nil, city: nil)
+  end
+
   def correct_user
     @user = User.find(params[:id])
     redirect_to(root_url) unless @user == current_user
+  end
+
+  def current_user?(user)
+    user == current_user
   end
 
   def send_activation_mail
@@ -61,8 +79,11 @@ class UsersController < ApplicationController
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
-
   def user_profile_params
     params.require(:user).permit(:first_name, :second_name, :birthday, :city, :password, :password_confirmation)
+  end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
   end
 end

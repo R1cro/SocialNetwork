@@ -1,25 +1,33 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-michael:
-  email: michael@example.com
+r1cro:
+  email: ateseyko@qulix.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+  admin: true
 
 archer:
-  email: duchess@example.gov
+  email: duchess@qulix.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
 
 lana:
-  email: hands@example.gov
+  email: hands@qulix.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
 
 malory:
-  email: boss@example.gov
+  email: boss@qulix.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+
+jackob:
+  email: jkob@qulix.com
+  password_digest: <%= User.digest('password') %>
+  activated: false
+  actvated_at: <%= nil %>
+
