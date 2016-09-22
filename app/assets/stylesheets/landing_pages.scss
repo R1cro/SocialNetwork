@@ -74,6 +74,11 @@ h2 {
   color: #777;
 }
 
+h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -258,4 +263,9 @@ aside {
       border-bottom: 1px solid #e7e7e7;
     }
   }
+}
+
+.user-delete {
+  text-align: right;
+  text-transform: uppercase;
 }

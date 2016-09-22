@@ -7414,3 +7414,285 @@ UserMailerTest: test_account_activation
   Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.3ms)
 UserMailer#account_activation: processed outbound mail in 5.8ms
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$e/pjo2KyOt5o9IdLaGFRuu.ixLJJowiA0sjkSiedqdDrq9DLsP3Vq', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.595488', '2016-09-22 15:55:13.595488', 120768948)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$aqm2evMyrCF4HO.5qCaK3upUPp766avQn1QeQsxJDvnRq5WRFPktW', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.595488', '2016-09-22 15:55:13.595488', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$FCVnElWqj6Cico8xv/4kuOV8CXTSXtl8QVgCgTDtkx9Exm2pPr55u', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.595488', '2016-09-22 15:55:13.595488', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$7ZtwyCbWzHiYy3/6iAGpiOOMmiFpsG92a3siB9jEFtiHFEt/fmHBq', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.595488', '2016-09-22 15:55:13.595488', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$kFds6tkOky9PihaAB0nih.yWoyyep8EM7r5atrL6V0V3hZjX.nxI2', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.612131', '2016-09-22 15:55:13.612131', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$qF8ITQhgTmYOfOlFus.DXOGrhRTZ8eV/YnUg2TFHTdPrRrrAUOrTq', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.612131', '2016-09-22 15:55:13.612131', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$oJqOwqKuYU/6A0Mm8bAQi.Y.SnoRdGYljqa9NAxDsiCiBy5PrBcl.', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.612131', '2016-09-22 15:55:13.612131', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$eW3jW/AAr0skraAzYp2wNekqQ/gi9xBaeGfj.t7mGrbDCnBlPbVb6', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.612131', '2016-09-22 15:55:13.612131', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$lt6ucfBYzxXBON8Zw1lMIOmRzDNULpi9TsO8.rrhIqY526WxIkNTm', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.623544', '2016-09-22 15:55:13.623544', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$sz63K21rKXOaFFbVfvj3mOsnstB0XdvRV30jtKQiR3onFNXDGeoaa', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.623544', '2016-09-22 15:55:13.623544', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$VqUopCfQpsl9yj0bKdGiZOXK3JIvAh/A0ZxisrBiHFBOBZbnQsuDm', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.623544', '2016-09-22 15:55:13.623544', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$wPqNnk1JfLxJAB9Cj1Mx0OTv.FHesYHfxWdyWaIFopls2rNoDyCtm', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.623544', '2016-09-22 15:55:13.623544', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$/H5uKJgm.7m1WtM3jreaduUMD6uW1JjPQPUHO7j/NPu7YhU0QOSFe', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.642789', '2016-09-22 15:55:13.642789', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$Zs/.kk2CTYq/KlM9L0jwG.u5fa.hGNJ4/sr1UsozWl1aS9j0xyysW', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.642789', '2016-09-22 15:55:13.642789', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$w/X/IRY9TQw4OcR77wVPPO5zTLgqyGQ9CL8NBvXpEiczAmLt1W2ei', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.642789', '2016-09-22 15:55:13.642789', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$gTq2CSx8c55/MGTTGhF.5uSRRUH.e4lbqDFdbgjEfRIImnN6Nwdh.', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.642789', '2016-09-22 15:55:13.642789', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$wncDZ8C1ToiUdyDDCzQ4zOdUDBvfKlGU2cjDz8aZZFlYdCzuAzHVq', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.810273', '2016-09-22 15:55:13.810273', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$1voviVUmopLLK.lUOSnsouGaW6JKNPgIaInPo64sjVoyNBqlRixnW', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.810273', '2016-09-22 15:55:13.810273', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$4Pl7g.luQk5w8As2276jUeH7bw5K5.n7Bxoc/YbUBde1p59I3zv1W', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.810273', '2016-09-22 15:55:13.810273', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$kiNNgOSP7VY6zqoxJ9xloeItQ0CxgBhI8RND7HR.u/PIbrTF8jJGW', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.810273', '2016-09-22 15:55:13.810273', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$CPyturoya37WQ9aLd3KsfuaZFuFc9bPG1TufXl8j34OG9weWBUq/i', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.820486', '2016-09-22 15:55:13.820486', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$MJyz9kSX1wtpj4dKp9prwOnTqpgIZZTnbnYaRG5D4sINIw1LlxCPi', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.820486', '2016-09-22 15:55:13.820486', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$sQeYH8W2nCnIHBUtnizq1OOSRUslYYDvz/jj0WaAHUEImYObkMM2C', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.820486', '2016-09-22 15:55:13.820486', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$W5LfDpJalhf84ucPptXbQeFOct1IC98ZvxR/rqi2JfO8vuS3R6dv2', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.820486', '2016-09-22 15:55:13.820486', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$3pqyoCkZ/0tSY5D9Sohj7OwFKlaiIgvKdJs5zHUsAB1hv1hDMYwPO', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.830549', '2016-09-22 15:55:13.830549', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$SN08qDUH.1zMVZZrRbK9O.PZ3hbGDh6qUaS2fWqiTAyu0XgDssfpi', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.830549', '2016-09-22 15:55:13.830549', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$xuZoe0LzEP/kIf8bKmnR.OSgWFO/YqPq9eT1Ap1YStkuva0r3KBmu', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.830549', '2016-09-22 15:55:13.830549', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$p.9MJar6Rwt4cHaERV9E6emrZXX.HGsFkv3o2UR.CeoRn3zj.a0p6', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.830549', '2016-09-22 15:55:13.830549', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$wGew.YRbWj/rb1vWB8MxYOAgpi1.4ggX/8dHsCmhmFhwwxbSVdZya', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.840527', '2016-09-22 15:55:13.840527', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$2RkKkuE8/ioEa3VOW68ZGuiwrWeXfZCTGk748CxyrnXEoCucxTPja', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.840527', '2016-09-22 15:55:13.840527', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$3xiCXU8qB48ZRM7x32gj5uUbKfRKEfGhQv4rNQMi3WH62rpqq/.A6', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.840527', '2016-09-22 15:55:13.840527', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$8oiY4sDiAB3OVZo90wttmu08h3fJipUDaQuumsDHrsKc0eZaPCpky', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.840527', '2016-09-22 15:55:13.840527', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$uUMPtpAcVeZXAHqrICBYUe/cfV2PtWIpASpvPkHWU8aB/5e9Yie1C', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.850543', '2016-09-22 15:55:13.850543', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$hxocqPsBjjddKeWKoKpzFuw2rP.lSFOhAnzd0VeR4lDOx25N1uh6u', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.850543', '2016-09-22 15:55:13.850543', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$wRAcfwX6F.stqXbJj6575Of1I7ylNrzxNejW7KkjqBegYzX6kmBFi', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.850543', '2016-09-22 15:55:13.850543', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$bIpy8Yw9ZHoGExVJXCPH6egkb/36oOiGttiL8SLcGm2A94vBJR4IK', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.850543', '2016-09-22 15:55:13.850543', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$sz/U2RZ8DvbmqgqWC5q5SuNG/K3Z26icayfdHwYC3gbkff2TRsquq', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.860786', '2016-09-22 15:55:13.860786', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$uO5Wr.Lku5zKCiTt6gi2FOiuTGGHeYg1W7CDVdGs.99RxzA2o3KWO', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.860786', '2016-09-22 15:55:13.860786', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$ewapFzFBWh71v7jSX3a2u.mnTW1aHqthFJ1SU9HUKE5UfdVrBZ/XO', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.860786', '2016-09-22 15:55:13.860786', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$yECLawHdMMNyZQMTnE8Ke.0ADIlu3DMQ.WsNJl8G2Fd7IAcJ7Aw42', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.860786', '2016-09-22 15:55:13.860786', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$PKH5ZF.YrEPjiuFU3Hka/uZS4DF8AnkbefLutDC8rEragIz8Fxd3O', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.870702', '2016-09-22 15:55:13.870702', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$jkNehqflmUEEmbzs6IehI.7bnzjO0BPZiLM9boNxqAb.E6SbfLcJi', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.870702', '2016-09-22 15:55:13.870702', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$4GCE5e7uDehjzDTSNby8A.fcj0087hN1FeuzPCUeIfy9PHOrbspO6', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.870702', '2016-09-22 15:55:13.870702', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$ZqgwwzW6wRY0u1dPFvuKMu3a5PI4Nzpwui9NpWQuFm.p3G58RV.VS', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.870702', '2016-09-22 15:55:13.870702', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$7EQfXvvs6MDdF2b.XTIOxuf9/72Vn25M.I5UT90xU5vGEjXjzQAfm', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.880836', '2016-09-22 15:55:13.880836', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$PRHmX89qtLHIROcP7PL/X.DSEpbCca0b24PcfHMTH.tMMydDxjrf6', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.880836', '2016-09-22 15:55:13.880836', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$ohxmhcsxD5jo8Zjrb1z1T.pynX0nxLO/kyo.pJbRQ4n.O8gMNhcFS', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.880836', '2016-09-22 15:55:13.880836', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$PXSHB5IxjvTucAVyb/l1e.MT9NORzupXxk/deoyY2X4lXpFwjpwM.', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.880836', '2016-09-22 15:55:13.880836', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$rnxsl4LK1dQKbu33PTxa2euBQWwjIWjOax0joFVNaDHuBOVsl0W.m', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.890069', '2016-09-22 15:55:13.890069', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$9psMUB8taGCyaFqRkeW8tOK8QY.W/J/T4Z69vpkfMuRbQ8Icdd.66', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.890069', '2016-09-22 15:55:13.890069', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$V6REzC065XqwlZYd6xN/keXp/efowKQMc65px5BdUugA474Y.wYSi', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.890069', '2016-09-22 15:55:13.890069', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$banSiTtPL8Ir2L0D8Wt3NuE2.KOQVr8aP/fIXyDe3CC/5RcThA6q6', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.890069', '2016-09-22 15:55:13.890069', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$1zrTnIaMsOzBFA9zUpcgUeMd7WUqVYar.BKyWa8FPAQBiStGVCE/u', 't', '2016-09-22 15:55:13 UTC', 't', '2016-09-22 15:55:13.899359', '2016-09-22 15:55:13.899359', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$jWkouv7iimzorCpRRjxRzu7Hqb6ZjhP4IJ8KW1PA87B.mLgxCUe4.', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.899359', '2016-09-22 15:55:13.899359', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$Wp7ETDgvUxo97hahIGYRIezGmcJWKNoAAoqZPhE8m38MsQpMQHINO', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.899359', '2016-09-22 15:55:13.899359', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$7C9yLzUuQIjCexUP/bJARuvOVGG0WLrJ.PNvr90/viHOPao/O.goy', 't', '2016-09-22 15:55:13 UTC', '2016-09-22 15:55:13.899359', '2016-09-22 15:55:13.899359', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$gNQBmKF3JW8nj0NTrjTAnutagybhMjgmp1EgQ2frY6I37t858oG8.', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.059636', '2016-09-22 15:55:26.059636', 120768948)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$DDF212mmnTIsguFxgyMfoOVDm7dItT85eg0YzRTdUFDtpHn5s7pFG', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.059636', '2016-09-22 15:55:26.059636', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$fVUW0aMq0/G634I4YvkiOuyPEiP57QwUGvGSE4gxAY3Vy43wpQXou', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.059636', '2016-09-22 15:55:26.059636', 409608538)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$s3qudtGAua5qVnRarD.pXeow3siKXrLbyEYke7C09VL.hvqJ6sor.', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.059636', '2016-09-22 15:55:26.059636', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$3e0YpVQODBwzedyoOkXjVO1j.mpWSPUzvRBU7fM8xJa6zhIIgRV3u', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.074637', '2016-09-22 15:55:26.074637', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$/u6oengPK82MFU8AYO5sHOQMvoTPXMrO8HXF1aECpWGy3TiBvXR/u', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.074637', '2016-09-22 15:55:26.074637', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$HEDQ/iiYGZD25qQfZO3/Fe1BBr.xTEzybgquI36HBvb8rrCOgUtwe', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.074637', '2016-09-22 15:55:26.074637', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$6DgLv/qpse7NO7jaacKrJ.Hr/aT9rIOk0ycW8DS63Lml.0OH3Q8Au', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.074637', '2016-09-22 15:55:26.074637', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$LA1CI/68NFLcQvgCtmUIj.ILMUUEpawuHpbMseIIwfS0LPPN6gUSO', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.085098', '2016-09-22 15:55:26.085098', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$t9RSr249FRaF0.qKrvKoKOnZE.4SBJYmfgVc3gc8XD3Y4UzGz8hzW', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.085098', '2016-09-22 15:55:26.085098', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$/dwofinmVqof7JcNFCy7W.HzxPbUxxVVPCLBMwNgLlTHdgjTyYllG', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.085098', '2016-09-22 15:55:26.085098', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$vHfzHVZPFm4uJfPtha1akOpdLta.JK7tlsSRXOq6asvk5QJ/K0ts.', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.085098', '2016-09-22 15:55:26.085098', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$.111rqmRM7Rm8XBrlKJpCO0yjUC/J/pqsYFaEvnl6NN4ywLhVhGUa', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.095610', '2016-09-22 15:55:26.095610', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$o.jdMYLgySZXqgMoPSAGZe1YFs9LSlsDyytzGef7Z17aWwEHRh9qW', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.095610', '2016-09-22 15:55:26.095610', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$0yth94ezS9uWq7.Ngp0G9eD99CcPXZkRfASWy7EYQRMWjF8BkD99i', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.095610', '2016-09-22 15:55:26.095610', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$BDf1ArRp/ZrouxpFsYMOe.mkdL3uWfiYa5DHffvc5yJPfvEthxFiC', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.095610', '2016-09-22 15:55:26.095610', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$9bJU4ITgC3u1TdOUU.DdbO8LZtRdhJy3KUuZZY.MfUINdj9jFPGkC', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.107611', '2016-09-22 15:55:26.107611', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$t6XhcnqwYbd/yByCRwcDxuRSL2aFyHSFLc6yjnyxaO7peZWkOrMgO', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.107611', '2016-09-22 15:55:26.107611', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$/hjL0WMIVIORgg0Mjc05yep2aHOoh8ZYowDAfmqbRcL/AdeUkili2', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.107611', '2016-09-22 15:55:26.107611', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$kAMZQsHAUIBVWL.ezZ5Px.1SdA.UjevT8BTsyngl9M2txynYrP7oe', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.107611', '2016-09-22 15:55:26.107611', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$AQ.PTXvSJiTIYN2N3JV83.T5bWfS7COvM4Yc.8totKON1kwhZom6O', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.118149', '2016-09-22 15:55:26.118149', 120768948)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$RzpYGgGGhIozNdRWow82juPJr9AO3Lr3XlGiuRFJjwifzWj4Nb5yq', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.118149', '2016-09-22 15:55:26.118149', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$6.eS0WCQSMh5EtTF.5y0k.qX73.QrMzpok.0M3zA7FCwtrlkQTrNi', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.118149', '2016-09-22 15:55:26.118149', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$.nu2kRLJRTU4ULxbmbFZT.AqYcMIbR5Ao.dOBSjv3DWH8dZ1PIruu', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.118149', '2016-09-22 15:55:26.118149', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$.Pl8Mu2gS8mHz5IY/euFaueIHqMFU4L7KFBJjYlERk7L6vnzSuO7m', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.129373', '2016-09-22 15:55:26.129373', 120768948)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$TPNtT7wRJmSmQrVt48THFuHYoJoByTsbg4QFbZejK6Ho7QGJ.LN2a', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.129373', '2016-09-22 15:55:26.129373', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$QyHkZI74HnmWsFTBifKZbuySShvz4Lc6tyff9BLJwYL6dBwjSb6.O', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.129373', '2016-09-22 15:55:26.129373', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$2HABOnzCXu.a2Qs5RQ1m3OXIPEpZZpYU9F3CQ.XwMVQ63mQ04vz/S', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.129373', '2016-09-22 15:55:26.129373', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$ghRDVSgPoMr7mGkFY4VY9e0dCSWwkiOxq8XomW.u00UfSc.IT07iW', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.147817', '2016-09-22 15:55:26.147817', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$SQSCK9z4hA6dR3wfbonOzOqbCyN5PXaBrPnhDt/8iJZ1/Xscit5Yy', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.147817', '2016-09-22 15:55:26.147817', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$kAmPURHOE/5TlUoGMtHdTu509K9nT9.FaCtssFkEHVKN6eYA4ngYa', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.147817', '2016-09-22 15:55:26.147817', 409608538)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$hYA3JookJDJ5qTEKTXPLVO.OSZTgSUZiu6LawgfiXzPynxd9BwSqu', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.147817', '2016-09-22 15:55:26.147817', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$YtmwOTa.zzBOXA2JgvB6kuEAwV1j/W0I9L3UKjwOboGJZDONhu6Ga', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.313040', '2016-09-22 15:55:26.313040', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$3X2BODmH4448cS0umg4OkOoUavFxKwZsF/9rUttdv4DrSgeJ0vYSO', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.313040', '2016-09-22 15:55:26.313040', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$OhhZs3p/yfc.bxKbngIu6euzc6HjWWNb1hNEu.0y/dh6LFTPJE1cC', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.313040', '2016-09-22 15:55:26.313040', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$J8apBWCbFh17x4ZpS7xF/OFKmZFBk1GLXTny07C7.WnfhsrCjSk/i', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.313040', '2016-09-22 15:55:26.313040', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$lEaUrefxUHY3ec2P0jNK.OLQ1/UmPxOQ3W/HzDddy/.Hnw2eSP1Ry', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.323802', '2016-09-22 15:55:26.323802', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$a80pJsp8EYT3swjGq4lMVOgcuOUaf0nBxRgoXCtZ1GzpzOlk8oez6', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.323802', '2016-09-22 15:55:26.323802', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$Wc4WyrSqXi3yArCP4grIYuLqbXx1Ess52nZgnoEKEzLvB8Gi1negG', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.323802', '2016-09-22 15:55:26.323802', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$jqn5PRqo950Z5dhXWFu/UuTSqbNvySYShSPulDbyD6kXiXm0IP6va', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.323802', '2016-09-22 15:55:26.323802', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$m.hwh4I6/lJTeXJW2jlJlOqIH4SiU5Ub4tYmU9hxwpvfXb0eH6qy6', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.333536', '2016-09-22 15:55:26.333536', 120768948)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$7zUJQCRk/ONNeoTWgt5GH.5/ZyiIpMxMXgTFxMhPj7vYKneI..OdS', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.333536', '2016-09-22 15:55:26.333536', 950961012)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$nYc56woxenRrcotdZxxPfuJZqYM95Hzc7BgWPS8nFcJ5KARB6Wgam', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.333536', '2016-09-22 15:55:26.333536', 409608538)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$GgQWRGapoPtCEIOCIgJejOfj0uorNsibfD7pex9zWM2G9o1ZdwsNa', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.333536', '2016-09-22 15:55:26.333536', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$kElVyFhwRHCR5HvBNXkQ0OMObaWfJYDpcsO7XzNtXj46ws00wnC5y', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.342846', '2016-09-22 15:55:26.342846', 120768948)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$4b2wkU5l4OSEV9vSfXMnWOdDQyv1kPpifGY271mqrE48hC4On0.LK', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.342846', '2016-09-22 15:55:26.342846', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$2Yp3985.kbwvkn4UTvsQ9uDSTOdOTaQn9v6c1EHBWK2BAF60pAaN2', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.342846', '2016-09-22 15:55:26.342846', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$GIzeGHSJkD8KhI41EEshI.UI1sI8OACr7w3idN6VaQ/d/cBnzXUv2', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.342846', '2016-09-22 15:55:26.342846', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$X5xNaiKpIL3T12D4fi4Siu6JnlIiBPFLqAbvv/UfAJLJxyuP26ay.', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.352637', '2016-09-22 15:55:26.352637', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$BegCX4jzldFJ/2mGttk0iuiArmgkUkF6NwxRwPF2a1RZyjXQrnnhW', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.352637', '2016-09-22 15:55:26.352637', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$CROg584jDWh4FHS2uie7cu2odm3LAcO2Dtj5.hAYV3ucRK2gEF2Re', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.352637', '2016-09-22 15:55:26.352637', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$.KMbYMuYdbt3aoDGN3vSGu8if3NB7.fY2EecYTfntX1EighCFPIY6', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.352637', '2016-09-22 15:55:26.352637', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "admin", "created_at", "updated_at", "id") VALUES ('ateseyko@qulix.com', '$2a$04$1HTZcOOubAZA3/3.EpAVuu8ZEXQdEQTigwC5ipwnAOJNhyVLXNiIe', 't', '2016-09-22 15:55:26 UTC', 't', '2016-09-22 15:55:26.362315', '2016-09-22 15:55:26.362315', 120768948)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('duchess@qulix.com', '$2a$04$T63RzQHMvNWyHrkNZAlZUuypFOJ6lZpvFT2mwI1ABQ2pgd5/ZhxRm', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.362315', '2016-09-22 15:55:26.362315', 950961012)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('hands@qulix.com', '$2a$04$nEQYfqedFasrn9lGCfxK7.s48Ex0yGOJ2gvDHdkIFG9NmgXAcmpzW', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.362315', '2016-09-22 15:55:26.362315', 409608538)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "activated", "activated_at", "created_at", "updated_at", "id") VALUES ('boss@qulix.com', '$2a$04$C4zt/jMYtKn34SwgXRYLhOwaJOMfrrgvv60lxC5UFTIkdtixmEf9S', 't', '2016-09-22 15:55:26 UTC', '2016-09-22 15:55:26.362315', '2016-09-22 15:55:26.362315', 659682706)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

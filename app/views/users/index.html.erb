@@ -2,7 +2,7 @@
 <h1>All users</h1>
 
 <%= will_paginate %>
-<ul class="users">
-  <%= render @users.sort { |a,b| a.email.downcase <=> b.email.downcase } %>
-</ul>
+  <ul class="users">
+    <%= render @users.sort { |a,b| a.email.downcase <=> b.email.downcase } %>
+  </ul>
 <%= will_paginate %>

@@ -10,13 +10,14 @@
         </h1>
       <% else %>
         <h1>
-          <%= @user.first_name %>
-          <%= @user.second_name %>
+          <%= @user.email %>
           <% if @user.admin? %>[ADMIN]<% end %>
         </h1>
         <p>
-          <%= @user.email %>,
-          <%= @user.birthday %>
+          <%= @user.first_name %>
+          <%= @user.second_name %>,
+          <%= @user.age(@user.birthday) %>.
+          <%= @user.city %>
         </p>
       <% end %>
 
