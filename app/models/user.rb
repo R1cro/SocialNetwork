@@ -11,6 +11,7 @@ class User < ApplicationRecord
                                     format: { with: VALID_EMAIL_REGEX },
                                     uniqueness: { case_sensitive: false }
   has_secure_password
+  has_many :microposts, dependent: :destroy
   validates :password, presence:  true, length: { minimum: 6 },
                                     format: { with: PASSWORD_FORMAT },  allow_nil: true
 
