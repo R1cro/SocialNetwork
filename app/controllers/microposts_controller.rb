@@ -6,7 +6,7 @@ class MicropostsController < ApplicationController
     if @micropost.save
       redirect_to current_user
     else
-      redirect_to :back, flash: { danger: @micropost.errors.full_messages.join("<br>") }
+      redirect_to :back, flash: { danger: @micropost.errors.full_messages.join("<br><li>") }
     end
   end
 
