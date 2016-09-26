@@ -1,24 +1,10 @@
 <% provide(:title, @user.email) %>
 <div class="row">
   <aside>
-    <section>
-      <%= gravatar_for @user %>
-      <% if @user.first_name.nil? %>
-        <h1>
-          <%= @user.email %>
-          <% if @user.admin? %>[ADMIN]<% end %>
-        </h1>
-      <% else %>
-        <h1>
-          <%= @user.email %>
-          <% if @user.admin? %>[ADMIN]<% end %>
-        </h1>
-        <p>
-          <%= @user.first_name %>
-          <%= @user.second_name %>,
-          <%= @user.age(@user.birthday) %>.
-          <%= @user.city %>
-        </p>
+    <section class="user-form">
+      <%= render 'shared/about_user' %>
+      <% if logged_in? && @user.id == @current_user.id %>
+        <%= render 'shared/micropost_form' %>
       <% end %>
     </section>
   </aside>
@@ -31,6 +17,4 @@
         <%= will_paginate @microposts %>
     <% end %>
   </div>
-  <article>
-  </article>
 </div>

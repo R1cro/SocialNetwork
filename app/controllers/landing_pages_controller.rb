@@ -1,7 +1,8 @@
 class LandingPagesController < ApplicationController
-  before_action :redirect_to_profile, only: :home
+  #before_action :redirect_to_profile, only: :home
 
   def home
+
   end
 
   def help

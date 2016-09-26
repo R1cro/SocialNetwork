@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page], :per_page => 4)
+    @micropost = current_user.microposts.build if logged_in?
   end
 
   def new
@@ -50,13 +51,13 @@ class UsersController < ApplicationController
     end
   end
 
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = "Access to this page allowed only for users. Sign in to access this page."
-      redirect_to login_url
-    end
-  end
+  # def logged_in_user
+  #   unless logged_in?
+  #     store_location
+  #     flash[:danger] = "Access to this page allowed only for users. Sign in to access this page."
+  #     redirect_to login_url
+  #   end
+  # end
 
   def profile_info
     @user.update_attributes(first_name: nil, second_name: nil, birthday: nil, city: nil)

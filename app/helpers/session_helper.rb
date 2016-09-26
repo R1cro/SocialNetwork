@@ -13,6 +13,14 @@ module SessionHelper
     user == current_user
   end
 
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = "Access to this page allowed only for users. Sign in to access this page."
+      redirect_to login_url
+    end
+  end
+
   def current_user
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)
