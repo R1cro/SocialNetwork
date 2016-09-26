@@ -6,9 +6,7 @@ class MicropostsController < ApplicationController
     if @micropost.save
       redirect_to current_user
     else
-      # Need to fix!
-      flash[:danger] = 'Post can\'t be empty'
-      redirect_to root_path
+      redirect_to :back, flash: { danger: @micropost.errors.full_messages.join("<br>") }
     end
   end
 
