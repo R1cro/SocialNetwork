@@ -22,3 +22,6 @@ avatars/
 .sass-cache
 .idea/
 
+/public/uploads
+/
+

@@ -1,0 +1,12 @@
+development:
+  cloud_name: r1cro-socialnetwork
+  api_key: '419667145398731'
+  api_secret: Abv5BGQhTKXSUC8stlev3AJLZqo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: r1cro-socialnetwork
+  api_key: '419667145398731'
+  api_secret: Abv5BGQhTKXSUC8stlev3AJLZqo
+  enhance_image_tag: true
+  static_image_support: true

@@ -14,6 +14,11 @@ gem 'faker', '~> 1.6', '>= 1.6.6'
 gem 'will_paginate', '~> 3.1', '>= 3.1.3'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
+gem 'carrierwave', '~> 0.11.2'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'fog', '~> 1.38'
+gem 'rmagick', '~> 2.16'
+gem 'cloudinary', '~> 1.2', '>= 1.2.3'
 
 group :development, :test do
   gem 'byebug',  '9.0.0', platform: :mri
