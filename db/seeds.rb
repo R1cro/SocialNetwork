@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(email: "ateseyko@qulix.com",
-             password:              "swseuz2U",
-             password_confirmation: "swseuz2U",
+User.new(email: "admin",
+             password:              "admin",
+             password_confirmation: "admin",
              activated: true,
              activated_at: Time.zone.now,
              admin: true)
@@ -27,3 +27,5 @@ users = User.order(:created_at).take(6)
   content = Faker::Lorem.sentence(5)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+# Useless comment
