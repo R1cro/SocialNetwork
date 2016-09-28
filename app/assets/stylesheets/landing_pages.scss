@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 2.8em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -104,8 +104,8 @@ p {
 footer {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
-  margin-top: 45px;
-  padding-top: 5px;
+  margin-top: 10px;
+  padding-top: 3px;
   border-top: 1px solid #eaeaea;
   color: #777;
   a {
@@ -128,7 +128,6 @@ footer {
 }
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
 }
@@ -143,7 +142,7 @@ aside {
   }
   section {
     padding: 30px 0;
-    margin-top: 30px;
+    margin-top: 20px;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -242,10 +241,6 @@ aside {
   vertical-align: middle;
 }
 
-.personal-field {
-  padding-top: 30px
-}
-
 .forgot-password {
   float: right;
   padding-right: 10px;
@@ -268,6 +263,15 @@ aside {
 .user-delete {
   text-align: right;
   text-transform: uppercase;
+}
+
+.post-field {
+  padding: 3px;
+  rows: 3;
+}
+
+.image {
+  padding-top: 1px;
 }
 
 .microposts {
@@ -317,6 +321,69 @@ span.picture {
 }
 
 .user-form {
-  padding-left: 20px;
-  width: 65%;
+  padding: 0 10px;
 }
+
+.user-details {
+  padding-bottom: 25px;
+}
+
+.relationship {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  float: right;
+  overflow: auto;
+  padding-top: 35px;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: #cc8800;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.followers-link {
+  text-align: right;
+}
+
+.following-link {
+  text-align: left;
+}
+
+.follower-section {
+  padding: 0;
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 2px 2px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+#follow_form {
+  float: right;
+  width: 10%;
+  min-width: 100px;
+  padding-top: 40px;
+}
+

@@ -10,10 +10,19 @@ Rails.application.routes.draw do
   post  '/login',   to: 'session#create'
   delete  '/logout',  to: 'session#destroy'
 
-  resources :users
+
+
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   resources :forgot_password, only: [:new, :create, :edit, :update]
   resources :account_activations, only: [:edit]
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
   root 'landing_pages#home'
 end

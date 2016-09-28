@@ -2,17 +2,17 @@
 <% if @user.first_name.nil? %>
     <h1>
       <%= @user.email %>
-      <% if @user.admin? %>[ADMIN]<% end %>
     </h1>
+    <% if @user.admin? %>[ADMIN]<% end %>
 <% else %>
     <h1>
       <%= @user.email %>
-      <% if @user.admin? %>[ADMIN]<% end %>
     </h1>
     <p>
       <%= @user.first_name %>
       <%= @user.second_name %>,
       <%= @user.age(@user.birthday) %>.
-      <%= @user.city %>
+      <%= @user.city %>.
+      <% if @user.admin? %>[ADMIN]<% end %>
     </p>
 <% end %>

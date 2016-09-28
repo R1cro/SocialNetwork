@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page], :per_page => 4)
+    @microposts = @user.microposts.paginate(page: params[:page], :per_page => 3)
     @micropost = current_user.microposts.build if logged_in?
   end
 
@@ -28,11 +28,10 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
-
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_profile_params)
-      flash[:success] = "Done."
+      flash[:success] = "Done"
       redirect_to @user
     else
       render 'edit'
@@ -51,14 +50,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # def logged_in_user
-  #   unless logged_in?
-  #     store_location
-  #     flash[:danger] = "Access to this page allowed only for users. Sign in to access this page."
-  #     redirect_to login_url
-  #   end
-  # end
-
   def profile_info
     @user.update_attributes(first_name: nil, second_name: nil, birthday: nil, city: nil)
   end
@@ -74,6 +65,20 @@ class UsersController < ApplicationController
 
   def send_activation_mail
     UserMailer.account_activation(@user).deliver_now
+  end
+
+  def following
+    @title = 'Following'
+    @user = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+  def followers
+    @title = 'Followers'
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
   end
 
   private

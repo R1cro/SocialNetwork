@@ -1,14 +1,21 @@
 <% provide(:title, @user.email) %>
+
+
+</section>
 <div class="row">
-  <aside>
-    <section class="user-form">
-      <%= render 'shared/about_user' %>
-      <% if logged_in? && @user.id == @current_user.id %>
-        <%= render 'shared/micropost_form' %>
-      <% end %>
-    </section>
-  </aside>
   <div class="col-md-8">
+    <aside>
+      <section class="user-form">
+        <%= render 'user_follow_form' if logged_in? %>
+        <%= render 'shared/relationship' %>
+        <div class="user-details">
+          <%= render 'shared/about_user' %>
+        </div>
+          <% if logged_in? && @user.id == @current_user.id %>
+            <%= render 'shared/micropost_form' %>
+          <% end %>
+      </section>
+    </aside>
     <% if @user.microposts.any? %>
         <h3>User posts (<%= @user.microposts.count %>)</h3>
         <ol class="microposts">
