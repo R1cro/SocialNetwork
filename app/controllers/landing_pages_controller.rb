@@ -1,11 +1,15 @@
 class LandingPagesController < ApplicationController
-  #before_action :redirect_to_profile, only: :home
 
   def home
     if logged_in?
-      @micropost  = current_user.microposts.build
-      @feed_items = current_user.feed.paginate(page: params[:page])
+      @user = current_user
+      @micropost  =  @user.microposts.build
+      @feed_items =  @user.feed.paginate(page: params[:page])
+    else
+      @feed_items =  Micropost.order('created_at').paginate(page: params[:page], :per_page => 3)
     end
+  else
+
   end
 
   def help

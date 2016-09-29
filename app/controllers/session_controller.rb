@@ -12,7 +12,7 @@ class SessionController < ApplicationController
         else
           forget(user)
         end
-        redirect_back_or user
+        redirect_back_or root_url
       else
         flash[:danger] = "Your account not activated. Check your email for the activation link."
         redirect_to root_url

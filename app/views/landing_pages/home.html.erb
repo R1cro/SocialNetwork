@@ -1,26 +1,31 @@
-<% provide(:title, 'Home') %>
+<% provide(:title, 'Feed') %>
 <% if logged_in? %>
-    <div class="row">
-      <aside class="col-md-4">
-        <section class="user_info">
-          <%= render 'shared/about_user' %>
-        </section>
-        <section class="micropost_form">
-          <%= render 'shared/micropost_form' %>
-        </section>
-      </aside>
-      <div class="col-md-8">
-        <h3>Micropost Feed</h3>
-        <%= render 'shared/feed' %>
-      </div>
-    </div>
+  <div class="row">
+      <section class="user-info-feed">
+        <%= render 'shared/about_user' %>
+        <%= button_to 'POST', current_user, :method => 'get', class: 'btn btn-primary' %>
+      </section>
+        <div class="col-md-8 col-md-offset-2">
+          <%= render 'shared/feed' %>
+        </div>
+  </div>
 <% else %>
   <div class="center jumbotron">
     <h1>Social Network by R1cro</h1>
     <h2>
       This is the home page for the <a href="https://github.com/R1cro/SocialNetwork/">my web-application.</a>
+      If you already registered, please, <a href="/login">log in</a>.
+      If you not, so, it is a time to sign up!
     </h2>
     <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Log in", login_path, class: "btn btn-lg" %>
+  </div>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h4>Last users posts</h4>
+      <%= render 'shared/feed' %>
+
+    </div>
   </div>
 <% end %>
 

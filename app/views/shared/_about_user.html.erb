@@ -3,7 +3,6 @@
     <h1>
       <%= @user.email %>
     </h1>
-    <% if @user.admin? %>[ADMIN]<% end %>
 <% else %>
     <h1>
       <%= @user.email %>
@@ -13,6 +12,5 @@
       <%= @user.second_name %>,
       <%= @user.age(@user.birthday) %>.
       <%= @user.city %>.
-      <% if @user.admin? %>[ADMIN]<% end %>
     </p>
 <% end %>
