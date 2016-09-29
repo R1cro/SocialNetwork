@@ -3,7 +3,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
   #include CarrierWave::RMagick
 
-  process resize_to_fill: [450, 250]
+  process resize_to_fill: [400, 200]
 
   def store_dir
     "uploaders/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"

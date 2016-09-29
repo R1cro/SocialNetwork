@@ -1,7 +1,7 @@
 <% provide(:title, @user.email) %>
 </section>
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-10 col-md-offset-1">
     <aside>
       <section class="user-form">
         <%= render 'user_follow_form' if logged_in? %>
