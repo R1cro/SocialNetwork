@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(//fonts.googleapis.com/css?family=Oswald:400,700|Merriweather:400,300);
+@import url(//fonts.googleapis.com/css?family=Lato|Roboto:400,600|Oswald:400,700|Merriweather:400,300;);
 
 //Debug
 @mixin box_sizing {
@@ -21,6 +21,7 @@
 }
 
 body {
+  font-family: 'Lato', sans-serif;
   padding-top: 60px;
 }
 
@@ -47,9 +48,18 @@ textarea {
   }
 }
 
-.nav {
-  font-family: 'Oswald', sans-serif;
+.main-title {
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  font-size: 4em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.nav {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,17 +67,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
   font-size: 2.3em;
-  letter-spacing: -1px;
   margin-bottom: 10px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
-  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
@@ -75,8 +83,8 @@ h2 {
 }
 
 h4 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 p {
@@ -91,8 +99,7 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
@@ -102,8 +109,8 @@ p {
 }
 
 footer {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
   margin-top: 10px;
   padding-top: 3px;
   border-top: 1px solid #eaeaea;
@@ -153,7 +160,7 @@ aside {
       line-height: 2;
     }
     h1 {
-      font-size: 1.9em;
+      font-size: 1.7em;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
@@ -213,8 +220,14 @@ aside {
 }
 
 .dropdown-toggle {
-  font-family: 'Oswald';
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.dropdown-menu li {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .checkbox {
@@ -286,13 +299,18 @@ aside {
     padding-top: 0;
   }
   .content {
+    font-size: 1.1em;
     display: block;
     margin-left: 100px;
-    img {
-      display: block;
-      padding: 10px 0;
-    }
+    padding-bottom: 5px;
   }
+
+  .post-image {
+    margin-left: 100px;
+    display: block;
+    padding: 5px 0;
+  }
+
   .timestamp {
     color: darken(#e7e7e7, 20%);
     display: block;
