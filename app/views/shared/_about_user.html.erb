@@ -1,6 +1,6 @@
 <div class="user-details">
   <%= gravatar_for @user %>
-  <% if @user.first_name.empty? %>
+  <% if @user.first_name.nil? %>
       <h1>
         <%= @user.email %>
       </h1>

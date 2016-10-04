@@ -18,7 +18,6 @@
     </section>
   </aside>
   <div class="col-md-8">
-
     <% if @users.any? %>
       <h4><%= @title %></h4>
       <ul class="users follow">
@@ -26,6 +25,11 @@
         <%= render 'users/user_follow_form' %>
       </ul>
       <%= will_paginate %>
+    <% else %>
+      <div class="empty-zone">
+        <h1>Followers 0 | 0 Following </h1>
+        <h4>Maybe you need to do something?</h4>
+      </div>
     <% end %>
   </div>
 </div>

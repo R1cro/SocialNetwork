@@ -1,5 +1,5 @@
 <% provide(:title, 'Feed') %>
-<% if logged_in? %>
+<% if logged_in?  %>
   <div class="row">
     <aside class="col-md-4">
       <section class="user-info-feed">
@@ -8,12 +8,19 @@
           <%= render 'shared/relationship' %>
         </div>
         <% if logged_in? && @user.id == @current_user.id %>
-            <%= render 'shared/micropost_form' %>
+          <%= render 'shared/micropost_form' %>
         <% end %>
       </section>
     </aside>
       <div class="col-md-8">
-        <%= render 'shared/feed' %>
+        <% if @feed_items.any? %>
+          <%= render 'shared/feed' %>
+        <% else %>
+          <div class="empty-zone">
+            <h1>Black words </h1>
+            <h4>on this perfect white background.</h4>
+          </div>
+        <% end %>
       </div>
   </div>
 <% else %>

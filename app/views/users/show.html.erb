@@ -20,6 +20,11 @@
           <%= render @microposts %>
         </ol>
         <%= will_paginate @microposts %>
+    <% else %>
+        <div class="empty-zone">
+          <h1>No posts...</h1>
+          <h4>Where is your posts, dude?</h4>
+        </div>
     <% end %>
   </div>
 </div>
