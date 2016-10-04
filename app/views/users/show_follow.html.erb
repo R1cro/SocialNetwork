@@ -1,13 +1,15 @@
 <% provide(:title, @title) %>
 <div class="row">
   <aside class="col-md-4">
-    <section class="user_info">
+    <section class="user-info">
       <%= render 'shared/about_user' %>
+      <div class="relationship">
+        <%= render 'shared/relationship' %>
+      </div>
     </section>
-      <%= render 'shared/relationship' %>
     <section class="follower-section">
       <% if @users.any? %>
-        <div class="user_avatars">
+        <div class="user-avatars">
           <% @users.each do |user| %>
             <%= link_to gravatar_for(user, size: 40), user %>
           <% end %>
@@ -16,8 +18,9 @@
     </section>
   </aside>
   <div class="col-md-8">
-    <h4><%= @title %></h4>
+
     <% if @users.any? %>
+      <h4><%= @title %></h4>
       <ul class="users follow">
         <%= render @users %>
         <%= render 'users/user_follow_form' %>

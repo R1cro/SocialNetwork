@@ -59,7 +59,6 @@ textarea {
 .nav {
   font-family: 'Lato', sans-serif;
   font-size: 1.2em;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,8 +147,8 @@ aside {
     margin-top: 20px;
   }
   section {
-    padding: 30px 0;
-    margin-top: 20px;
+    padding: 5px 0;
+    margin-top: 10px;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -160,12 +159,12 @@ aside {
       line-height: 2;
     }
     h1 {
-      font-size: 1.7em;
-      text-align: left;
+      font-size: 1.6em;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
       padding-top: 20px;
+      text-align: inherit;
     }
   }
 }
@@ -278,11 +277,6 @@ aside {
   text-transform: uppercase;
 }
 
-.post-field {
-  padding: 3px;
-  rows: 3;
-}
-
 .image {
   padding-top: 1px;
 }
@@ -343,19 +337,29 @@ span.picture {
 }
 
 .user-details {
-  padding-bottom: 35px;
+  padding-bottom: 10px;
+}
+
+.posting-form {
+  padding-top: 30px;
+}
+
+.personal-field {
+  width: 100%;
 }
 
 .relationship {
-  font-family: 'Oswald', sans-serif;
+  font-size: 1.1em;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+  margin-left: 50px;
+  margin-bottom: 40px;
   text-transform: uppercase;
-  float: right;
-  overflow: auto;
-  padding-top: 35px;
   a {
     float: left;
-    padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    width: 40%;
+    margin: auto;
+    border-left: 2px solid $gray-lighter;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -365,9 +369,9 @@ span.picture {
       text-decoration: none;
       color: #cc8800;
     }
-  }
-  strong {
-    display: block;
+    strong {
+      display: block;
+    }
   }
 }
 
@@ -380,10 +384,11 @@ span.picture {
 }
 
 .follower-section {
-  padding: 0;
+ padding: 0;
+ margin: 0;
 }
 
-.user_avatars {
+.user-avatars {
   overflow: auto;
   margin-top: 10px;
   .gravatar {
@@ -409,9 +414,6 @@ span.picture {
 }
 
 .user-info-feed {
-  text-align: center;
-  margin: auto;
-  width: 45%;
   padding-bottom: 20px;
 }
 

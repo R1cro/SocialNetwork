@@ -13,7 +13,7 @@ User.create!(email: "ateseyko@qulix.com",
              activated_at: Time.zone.now,
              admin: true)
 
-User.create!(email: "teseyko@outlook.com",
+User.create!(email: "r1cro.solution@outlook.com",
              password:              "swseuz2U",
              password_confirmation: "swseuz2U",
              activated: true,
@@ -38,7 +38,7 @@ User.create!(email: "johne@qulix.com",
              activated: true,
              activated_at: Time.zone.now,
              admin: false)
-530.times do |n|
+130.times do |n|
   email = "user-#{n+1}@mail.com"
   password = "12345678"
   User.create!(email: email,
@@ -48,15 +48,15 @@ User.create!(email: "johne@qulix.com",
                activated_at: Time.zone.now)
 end
 
-users = User.order(:created_at).take(530)
+users = User.order(:created_at).take(130)
 30.times do
-  content = Faker::Lorem.sentence(35)
+  content = Faker::Lorem.sentence(12)
   users.each { |user| user.microposts.create!(content: content) }
 end
 
 users = User.all
 user  = users.first
-following = users[2..1000]
-followers = users[300..600]
+following = users[2..130]
+followers = users[30..130]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }

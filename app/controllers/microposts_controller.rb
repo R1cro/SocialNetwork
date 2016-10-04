@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      redirect_to current_user
+      redirect_to root_path
     else
       redirect_to :back, flash: { danger: @micropost.errors.full_messages.join('<br><li>') }
     end
@@ -15,7 +15,6 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     flash[:success] = 'Micropost deleted'
     redirect_to request.referrer
-
   end
 
   private

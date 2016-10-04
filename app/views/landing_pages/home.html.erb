@@ -1,11 +1,18 @@
 <% provide(:title, 'Feed') %>
 <% if logged_in? %>
   <div class="row">
-    <section class="user-info-feed">
-      <%= render 'shared/about_user' %>
-      <%= button_to 'POST', current_user, :method => 'get', class: 'btn btn-primary to-user-profile' %>
-    </section>
-      <div class="col-md-10 col-md-offset-1">
+    <aside class="col-md-4">
+      <section class="user-info-feed">
+        <%= render 'shared/about_user' %>
+        <div class="relationship">
+          <%= render 'shared/relationship' %>
+        </div>
+        <% if logged_in? && @user.id == @current_user.id %>
+            <%= render 'shared/micropost_form' %>
+        <% end %>
+      </section>
+    </aside>
+      <div class="col-md-8">
         <%= render 'shared/feed' %>
       </div>
   </div>
