@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928085552) do
+ActiveRecord::Schema.define(version: 20161005140718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,16 +35,23 @@ ActiveRecord::Schema.define(version: 20160928085552) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
   end
 
+  create_table "user_profiles", force: :cascade do |t|
+    t.text     "first_name"
+    t.text     "second_name"
+    t.text     "city"
+    t.date     "birthday"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_user_profiles_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
     t.string   "password_digest"
     t.string   "remember_digest"
-    t.text     "first_name"
-    t.text     "second_name"
-    t.date     "birthday"
-    t.text     "city"
     t.string   "reset_digest"
     t.datetime "forgot_password_at"
     t.string   "activation_digest"
@@ -55,4 +62,5 @@ ActiveRecord::Schema.define(version: 20160928085552) do
   end
 
   add_foreign_key "microposts", "users"
+  add_foreign_key "user_profiles", "users"
 end
