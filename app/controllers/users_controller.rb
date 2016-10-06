@@ -31,10 +31,9 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_create_params)
-      redirect_to @user
-    else
-      render 'edit'
+      flash[:success] = "Done"
     end
+    render 'edit'
   end
 
   def create
@@ -78,7 +77,7 @@ class UsersController < ApplicationController
   private
   def user_create_params
     params.require(:user).permit(:email, :password, :password_confirmation,
-                                 user_profile_attributes: [:first_name, :second_name, :city, :birthday])
+                                 user_profile_attributes: [:first_name, :second_name, :city, :birthday, :id])
   end
 
   def admin_user
