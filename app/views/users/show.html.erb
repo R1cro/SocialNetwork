@@ -11,7 +11,6 @@
             <%= render 'shared/micropost_form' %>
           </div>
         <% end %>
-
       </section>
     </aside>
     <% if @user.microposts.any? %>
@@ -22,8 +21,10 @@
         <%= will_paginate @microposts %>
     <% else %>
         <div class="empty-zone">
-          <h1>No posts...</h1>
-          <h4>Where is your posts, dude?</h4>
+          <hr>
+            <h1>No posts...</h1>
+            <h4>Where is your posts, dude?</h4>
+          <hr>
         </div>
     <% end %>
   </div>

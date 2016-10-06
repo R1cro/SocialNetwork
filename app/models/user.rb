@@ -24,6 +24,8 @@ class User < ApplicationRecord
                                     dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :follower
 
+  has_one :user_profile
+  accepts_nested_attributes_for(:user_profile)
 
   validates :password, presence:  true, length: { minimum: 6 },
                                     format: { with: PASSWORD_FORMAT },  allow_nil: true
@@ -72,10 +74,6 @@ class User < ApplicationRecord
     else
       forgot_password_at < 20.minutes.ago
     end
-  end
-
-  def age(birthday)
-    (Time.now.to_s(:number).to_i - birthday.to_time.to_s(:number).to_i)/10e9.to_i
   end
 
   def downcase_email
