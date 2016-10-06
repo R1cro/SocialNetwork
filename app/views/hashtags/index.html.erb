@@ -1,0 +1,13 @@
+<h1>#HashTags</h1>
+<ol class="microposts">
+  <%= will_paginate @hashtags %>
+  <% @hashtags.each do |hashtag| %>
+      <li class="hashtag">
+        #<%= link_to hashtag.name, hashtag_path(hashtag.name) %>
+      </li>
+  <% end -%>
+  <%= will_paginate @hashtags %>
+
+</ol>
+
+

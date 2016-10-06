@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get  '/contact', to: 'landing_pages#contact'
   get  '/signup',  to: 'users#new'
   get  '/login',   to: 'session#new'
+  get 'hashtags/',         to: 'hashtags#index',     as: :hashtags
+  get 'hashtags/:hashtag', to: 'hashtags#show',      as: :hashtag
   post  '/login',   to: 'session#create'
   delete  '/logout',  to: 'session#destroy'
 

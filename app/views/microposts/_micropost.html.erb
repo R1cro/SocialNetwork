@@ -1,9 +1,9 @@
 <li id="micropost-<%= micropost.id %>">
   <%= link_to gravatar_for(micropost.user, size: 70), micropost.user %>
-  <% if micropost.user.first_name.nil? %>
+  <% if micropost.user.user_profile.first_name.nil? %>
       <h4><%= link_to micropost.user.email , micropost.user %></h4>
   <% else %>
-      <h4><%= link_to micropost.user.first_name + ' ' + micropost.user.second_name , micropost.user %></h4>
+      <h4><%= link_to micropost.user.user_profile.first_name + ' ' + micropost.user.user_profile.second_name , micropost.user %></h4>
   <% end %>
   <span class="content"><%= micropost.content %></span>
   <div class="post-image"><%= image_tag micropost.image.url if micropost.image? %></div>

@@ -6,9 +6,11 @@
   </h1>
   <p>
     <%= @user.email %>
-    <% if !@user.user_profile.birthday.nil? || !@user.user_profile.city.nil? %>
-      - <%= @user.user_profile.age(@user.user_profile.birthday) %> old.
-        <%= @user.user_profile.city %>.
+    <% if !@user.user_profile.birthday.nil? %>
+      | <%= @user.user_profile.age(@user.user_profile.birthday) %> years old.
+    <% end %>
+    <% if !@user.user_profile.city.nil? %>
+      <%= @user.user_profile.city %>
     <% end %>
   </p>
 </div>

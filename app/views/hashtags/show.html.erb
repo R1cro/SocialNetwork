@@ -1,0 +1,13 @@
+<h1><%= params[:hashtag] %></h1>
+<% if @hashtagged %>
+    <h3>Tagged posts (<%= @hashtagged.count %>)</h3>
+    <ol class="microposts">
+      <% @hashtagged.each do |hashtagged| %>
+          <% view    = hashtagged.class.to_s.underscore.pluralize %>
+          <% partial = hashtagged.class.to_s.underscore %>
+          <%= render "#{view}/#{partial}", {partial.to_sym => hashtagged} %>
+      <% end %>
+    </ol>
+<% else -%>
+    <p>There is no match for the <em><%= params[:hashtag] %></em> hashtag.</p>
+<% end -%>
