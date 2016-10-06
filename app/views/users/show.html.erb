@@ -5,13 +5,13 @@
     <aside>
       <section class="user-form">
         <%= render 'user_follow_form' if logged_in? %>
-        <%= render 'shared/relationship' %>
-        <div class="user-details">
-          <%= render 'shared/about_user' %>
-        </div>
-          <% if logged_in? && @user.id == @current_user.id %>
+        <%= render 'shared/about_user' %>
+        <% if logged_in? && @user.id == @current_user.id %>
+          <div class="posting-form">
             <%= render 'shared/micropost_form' %>
-          <% end %>
+          </div>
+        <% end %>
+
       </section>
     </aside>
     <% if @user.microposts.any? %>
@@ -20,6 +20,11 @@
           <%= render @microposts %>
         </ol>
         <%= will_paginate @microposts %>
+    <% else %>
+        <div class="empty-zone">
+          <h1>No posts...</h1>
+          <h4>Where is your posts, dude?</h4>
+        </div>
     <% end %>
   </div>
 </div>

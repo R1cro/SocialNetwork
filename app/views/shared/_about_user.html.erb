@@ -1,16 +1,18 @@
-<%= gravatar_for @user %>
-<% if @user.first_name.nil? %>
-    <h1>
-      <%= @user.email %>
-    </h1>
-<% else %>
-    <h1>
-      <%= @user.email %>
-    </h1>
-    <p>
-      <%= @user.first_name %>
-      <%= @user.second_name %>,
-      <%= @user.age(@user.birthday) %>.
-      <%= @user.city %>.
-    </p>
-<% end %>
+<div class="user-details">
+  <%= gravatar_for @user %>
+  <% if @user.first_name.nil? %>
+      <h1>
+        <%= @user.email %>
+      </h1>
+  <% else %>
+      <h1>
+        <%= @user.first_name %>
+        <%= @user.second_name %>
+      </h1>
+      <p>
+        <%= @user.email %>,
+        <%= @user.age(@user.birthday) %> old.
+        <%= @user.city %>.
+      </p>
+  <% end %>
+</div>

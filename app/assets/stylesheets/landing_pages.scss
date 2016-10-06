@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(//fonts.googleapis.com/css?family=Oswald:400,700|Merriweather:400,300);
+@import url(//fonts.googleapis.com/css?family=Lato|Roboto:400,600|Oswald:400,700|Merriweather:400,300;);
 
 //Debug
 @mixin box_sizing {
@@ -21,6 +21,7 @@
 }
 
 body {
+  font-family: 'Lato', sans-serif;
   padding-top: 60px;
 }
 
@@ -47,9 +48,17 @@ textarea {
   }
 }
 
-.nav {
-  font-family: 'Oswald', sans-serif;
+.main-title {
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
+  font-size: 4em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.nav {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,17 +66,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
   font-size: 2.3em;
-  letter-spacing: -1px;
   margin-bottom: 10px;
   text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
-  letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
@@ -75,8 +82,8 @@ h2 {
 }
 
 h4 {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 p {
@@ -91,8 +98,7 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 0.5px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
@@ -102,8 +108,8 @@ p {
 }
 
 footer {
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
   margin-top: 10px;
   padding-top: 3px;
   border-top: 1px solid #eaeaea;
@@ -141,8 +147,8 @@ aside {
     margin-top: 20px;
   }
   section {
-    padding: 30px 0;
-    margin-top: 20px;
+    padding: 5px 0;
+    margin-top: 10px;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -153,12 +159,12 @@ aside {
       line-height: 2;
     }
     h1 {
-      font-size: 1.9em;
-      text-align: left;
+      font-size: 1.6em;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
       padding-top: 20px;
+      text-align: inherit;
     }
   }
 }
@@ -213,8 +219,14 @@ aside {
 }
 
 .dropdown-toggle {
-  font-family: 'Oswald';
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.dropdown-menu li {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 .checkbox {
@@ -265,11 +277,6 @@ aside {
   text-transform: uppercase;
 }
 
-.post-field {
-  padding: 3px;
-  rows: 3;
-}
-
 .image {
   padding-top: 1px;
 }
@@ -286,13 +293,18 @@ aside {
     padding-top: 0;
   }
   .content {
+    font-size: 1.1em;
     display: block;
     margin-left: 100px;
-    img {
-      display: block;
-      padding: 10px 0;
-    }
+    padding-bottom: 5px;
   }
+
+  .post-image {
+    margin-left: 100px;
+    display: block;
+    padding: 5px 0;
+  }
+
   .timestamp {
     color: darken(#e7e7e7, 20%);
     display: block;
@@ -325,19 +337,36 @@ span.picture {
 }
 
 .user-details {
-  padding-bottom: 35px;
+  padding-bottom: 10px;
+}
+
+.posting-form {
+  padding-top: 30px;
+}
+
+.empty-zone {
+  padding: 20px 0;
+  h4 {
+    text-align: center;
+  }
+}
+
+.personal-field {
+  width: 100%;
 }
 
 .relationship {
-  font-family: 'Oswald', sans-serif;
+  font-size: 1.1em;
+  padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+  margin-left: 50px;
+  margin-bottom: 40px;
   text-transform: uppercase;
-  float: right;
-  overflow: auto;
-  padding-top: 35px;
   a {
     float: left;
-    padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    width: 40%;
+    margin: auto;
+    border-left: 2px solid $gray-lighter;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -347,9 +376,9 @@ span.picture {
       text-decoration: none;
       color: #cc8800;
     }
-  }
-  strong {
-    display: block;
+    strong {
+      display: block;
+    }
   }
 }
 
@@ -362,10 +391,11 @@ span.picture {
 }
 
 .follower-section {
-  padding: 0;
+ padding: 0;
+ margin: 0;
 }
 
-.user_avatars {
+.user-avatars {
   overflow: auto;
   margin-top: 10px;
   .gravatar {
@@ -391,9 +421,6 @@ span.picture {
 }
 
 .user-info-feed {
-  text-align: center;
-  margin: auto;
-  width: 45%;
   padding-bottom: 20px;
 }
 
