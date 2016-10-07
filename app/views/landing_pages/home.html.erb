@@ -11,6 +11,22 @@
           <%= render 'shared/micropost_form' %>
         <% end %>
       </section>
+      <section class="tag-cloud-panel">
+        <h3>Popular #tags</h3>
+        <hr>
+        <% if @micropost&.tag_counts.empty? %>
+          <div class="empty-zone">
+            <h1>Sorry</h1>
+            <h4>No #tags :(</h4>
+          </div>
+        <% else %>
+          <ol>
+          <% tag_cloud @micropost.tag_counts, %w[s m l] do |tag, css_class| %>
+            <li id="tag_cloud"><%= link_to tag.name, tag_path(tag.id), class: css_class %></li>
+          <% end %>
+          </ol>
+        <% end %>
+      </section>
     </aside>
       <div class="col-md-8">
         <% if @feed_items.any? %>
