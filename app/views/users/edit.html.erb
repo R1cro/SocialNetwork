@@ -30,10 +30,7 @@
               <%= up.text_field :second_name, class: 'form-control' %>
 
               <%= up.label :birthday %>
-              <%= up.date_select :birthday,
-                                 { order: [:month, :day, :year], prompt:
-                                     { day: 'Select day', month: 'Select month', year: 'Select year' },
-                                   start_year: Date.today.year - 15, end_year: Date.today.year - 70} %>
+              <%= render 'shared/birthday_field', object: up %>
 
               <%= up.label :city %>
               <%= up.text_field :city, class: 'form-control' %>

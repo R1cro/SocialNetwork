@@ -238,6 +238,17 @@ aside {
   }
 }
 
+.birthday-field {
+  padding-bottom: 15px;
+  .bootstrap-datetimepicker-widget.dropdown-menu {
+    font-size: 0.9em;
+    color: darken(#b3e0ff, 40%);
+  }
+  .input-group-addon {
+    color: darken(#b3e0ff, 40%);
+  }
+}
+
 #session_remember_me {
   width: auto;
   margin-left: 0;
