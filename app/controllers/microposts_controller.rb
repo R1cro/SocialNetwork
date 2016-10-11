@@ -1,4 +1,5 @@
 class MicropostsController < ApplicationController
+  include Twitter::Extractor
   before_action :logged_in_user,  only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
@@ -10,6 +11,7 @@ class MicropostsController < ApplicationController
       redirect_to :back, flash: { danger: @micropost.errors.full_messages.join('<br><li>') }
     end
   end
+
 
   def destroy
     @micropost.destroy

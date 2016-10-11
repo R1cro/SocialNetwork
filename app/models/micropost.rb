@@ -1,6 +1,6 @@
 class Micropost < ApplicationRecord
   belongs_to :user
-  acts_as_taggable_on :tags
+  acts_as_taggable
   default_scope -> { order(created_at: :desc) }
   mount_uploader :image, ImageUploader
   validates :user_id, presence: true

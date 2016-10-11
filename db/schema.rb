@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007133829) do
+ActiveRecord::Schema.define(version: 20161011144001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,21 @@ ActiveRecord::Schema.define(version: 20161007133829) do
     t.index ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
     t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
     t.index ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
+  end
+
+  create_table "simple_hashtag_hashtaggings", force: :cascade do |t|
+    t.integer "hashtag_id"
+    t.string  "hashtaggable_type"
+    t.integer "hashtaggable_id"
+    t.index ["hashtag_id"], name: "index_simple_hashtag_hashtaggings_on_hashtag_id", using: :btree
+    t.index ["hashtaggable_id", "hashtaggable_type"], name: "index_hashtaggings_hashtaggable_id_hashtaggable_type", using: :btree
+  end
+
+  create_table "simple_hashtag_hashtags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["name"], name: "index_simple_hashtag_hashtags_on_name", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|

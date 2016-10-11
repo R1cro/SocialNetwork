@@ -23,6 +23,8 @@ gem 'acts-as-taggable-on'
 gem 'momentjs-rails', '~> 2.15', '>= 2.15.1'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17', '>= 4.17.42'
 gem 'bootstrap-datepicker-rails', '~> 1.6', '>= 1.6.0.1'
+gem 'twitter-text', '~> 1.14'
+gem 'simple_hashtag'
 
 
 group :development, :test do
