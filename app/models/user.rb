@@ -24,8 +24,9 @@ class User < ApplicationRecord
                                     dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :follower
 
-  has_one :user_profile
-  accepts_nested_attributes_for(:user_profile)
+  has_one :user_profile, inverse_of: :user, dependent: :destroy
+
+  accepts_nested_attributes_for :user_profile
 
   validates :password, presence:  true, length: { minimum: 6 },
                                     format: { with: PASSWORD_FORMAT },  allow_nil: true

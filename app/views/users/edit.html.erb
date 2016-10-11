@@ -8,10 +8,10 @@
         <fieldset class="password-field">
           <legend> Change Password: </legend>
           <%= f.label :password %>
-          <%= f.password_field :password %>
+          <%= f.password_field  :password, class: 'form-control' %>
 
           <%= f.label :password_confirmation, "Confirm Password" %>
-          <%= f.password_field :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
         </fieldset>
 
         <fieldset class="avatar-field">
@@ -22,21 +22,18 @@
 
         <fieldset class="personal-field">
           <legend> Personal Information: </legend>
-          <%= f.fields_for :user_profile_attributes do |up| %>
-            <%= up.label :first_name %>
-            <%= up.text_field :first_name %>
+          <%= f.fields_for :user_profile do |up| %>
+              <%= up.label :first_name %>
+              <%= up.text_field :first_name, class: 'form-control' %>
 
-            <%= up.label :second_name %>
-            <%= up.text_field :second_name %>
+              <%= up.label :second_name %>
+              <%= up.text_field :second_name, class: 'form-control' %>
 
-            <%= up.label :birthday %>
-            <%= up.date_select :birthday,
-                { order: [:month, :day, :year], prompt:
-                { day: 'Select day', month: 'Select month', year: 'Select year' },
-                 start_year: Date.today.year - 15, end_year: Date.today.year - 70}, {required: true} %>
+              <%= up.label :birthday %>
+              <%= render 'shared/birthday_field', object: up %>
 
-            <%= up.label :city %>
-            <%= up.text_field :city %>
+              <%= up.label :city %>
+              <%= up.text_field :city, class: 'form-control' %>
           <% end %>
         </fieldset>
 
