@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: 'Lato', sans-serif;
+  color: darken(#b3e0ff, 45%);
   font-weight: bold;
   font-size: 2.3em;
   margin-bottom: 10px;
@@ -237,6 +238,17 @@ aside {
   }
 }
 
+.birthday-field {
+  padding-bottom: 15px;
+  .bootstrap-datetimepicker-widget.dropdown-menu {
+    font-size: 0.9em;
+    color: darken(#b3e0ff, 40%);
+  }
+  .input-group-addon {
+    color: darken(#b3e0ff, 40%);
+  }
+}
+
 #session_remember_me {
   width: auto;
   margin-left: 0;
@@ -310,6 +322,12 @@ aside {
     display: block;
     margin-left: 90px;
     padding: 10px;
+    a {
+      color: darken(#b3e0ff, 50%);
+    }
+    .post-delete-link {
+      color: darken(#e7e7e7, 100%);
+    }
   }
   .gravatar {
     float: left;
@@ -345,7 +363,7 @@ span.picture {
 }
 
 .empty-zone {
-  padding: 20px 0;
+  padding: 10px 0;
   h4 {
     text-align: center;
   }
@@ -438,4 +456,21 @@ span.picture {
   height: 100%;
   width: 100%;
   background: linear-gradient(transparent, white);
+}
+
+#tag_cloud {
+  line-height: 1.5em;
+  .s { font-size: 1.0em; color: darken(#e7e7e7, 30%); }
+  .m { font-size: 1.5em; color: darken(#e7e7e7, 50%); }
+  .l { font-size: 2.5em; color: darken(#b3e0ff, 40%); }
+}
+.tag-cloud-panel {
+  text-align: center;
+  ol {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 10px 0;
+    }
+  }
 }

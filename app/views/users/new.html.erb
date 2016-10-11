@@ -29,10 +29,7 @@
               </div>
             </div>
             <%= up.label :birthday %>
-            <%= up.date_select :birthday,
-               { order: [:month, :day, :year], prompt:
-               { day: 'Select day', month: 'Select month', year: 'Select year' },
-                 start_year: Date.today.year - 15, end_year: Date.today.year - 70}, { required: false } %>
+            <%= render 'shared/birthday_field', object: up %>
           <% end %>
         </fieldset>
 
