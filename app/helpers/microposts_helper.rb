@@ -1,10 +1,18 @@
 module MicropostsHelper
-  HASHTAG_REGEX = /(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/i
 
-  def find_hashtag(content)
-    hashtagged_content = content.to_s.gsub(HASHTAG_REGEX) do
-      link_to($&, tag_path($1),  {class: :tag_list})
+  def find_hashtag(micropost)
+    tag = micropost.tag_list
+    content = micropost.content
+    tag.each do |t|
+      content.gsub!(t) do
+        link_to(t, tag_path(tag_id_by_name(t)))
+      end
     end
-    hashtagged_content.html_safe
+    content.html_safe
   end
+
+  def tag_id_by_name(name)
+    ActsAsTaggableOn::Tag.find_by_name(name)&.id
+  end
+
 end

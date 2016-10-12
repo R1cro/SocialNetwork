@@ -8,4 +8,5 @@ class TagsController < ApplicationController
     @tag =  ActsAsTaggableOn::Tag.find(params[:id])
     @micropost = Micropost.tagged_with(@tag.name)
   end
+
 end
