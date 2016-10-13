@@ -5,12 +5,9 @@ class LandingPagesController < ApplicationController
       @user = current_user
       @micropost  =  @user.microposts.build
       @feed_items =  @user.feed.paginate(page: params[:page])
-      @tags = ActsAsTaggableOn::Tag.all
     else
       @feed_items =  Micropost.order('created_at').paginate(page: params[:page], :per_page => 7)
     end
-  else
-
   end
 
   def help
