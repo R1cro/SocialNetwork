@@ -8,8 +8,6 @@ class LandingPagesController < ApplicationController
     else
       @feed_items =  Micropost.order('created_at').paginate(page: params[:page], :per_page => 7)
     end
-  else
-
   end
 
   def help

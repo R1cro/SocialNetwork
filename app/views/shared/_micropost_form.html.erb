@@ -3,8 +3,8 @@
     <div class="post-field">
       <%= f.text_area :content, placeholder: 'Compose new micropost...', class: 'post-field' %>
     </div>
-    <%= f.submit 'Post', class: 'btn btn-primary' %>
     <span class="image">
       <%= f.file_field(:image) %>
     </span>
+    <%= f.submit 'Post', class: 'btn btn-primary' %>
 <% end %>
