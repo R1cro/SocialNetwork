@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   before_action :logged_in_user, only: [:edit, :update, :destroy]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
@@ -38,12 +37,19 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_create_params)
-    if @user.save
-      #send_activation_mail
-      #flash[:info] = "Please check your email to activate your account."
+    if Rails.env == 'development'
+      @user.activated = true
+      @user.save
+      log_in @user
       redirect_to root_path
     else
-      render 'new'
+      if @user.save
+        send_activation_mail
+        flash[:info] = "Please check your email to activate your account."
+        redirect_to root_path
+      else
+        render 'new'
+      end
     end
   end
 
@@ -83,4 +89,5 @@ class UsersController < ApplicationController
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
+
 end

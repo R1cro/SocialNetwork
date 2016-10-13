@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'session/new'
 
-  root 'landing_pages#home'
   get  '/help',    to: 'landing_pages#help'
   get  '/about',   to: 'landing_pages#about'
   get  '/contact', to: 'landing_pages#contact'
