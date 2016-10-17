@@ -19,7 +19,7 @@ User.create!(params[:admin])
 50.times do |n|
   first_name  = Faker::Name.first_name
   second_name  = Faker::Name.last_name
-  email = "user.#{n+1}@social.net"
+  email = Faker::Internet.free_email
   password = "12345678"
   User.create!(
                email: email,
@@ -38,8 +38,8 @@ end
 users = User.order(:created_at).take(50)
 
 20.times do
-  #tag_name = Faker::Lorem.word
-  content = Faker::Lorem.sentence(13)
+  tag_name = Faker::Lorem.word
+  content = '#' + tag_name + Faker::Lorem.sentence(13)
   users.each { |user| user.microposts.create!(content: content) }
 end
 

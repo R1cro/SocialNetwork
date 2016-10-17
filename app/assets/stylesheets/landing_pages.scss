@@ -309,6 +309,10 @@ aside {
     display: block;
     margin-left: 100px;
     padding-bottom: 5px;
+    a {
+      color: darken(#b3e0ff, 50%);
+      text-transform: uppercase;
+    }
   }
 
   .post-image {

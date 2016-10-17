@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.reorder("email").paginate(page: params[:page], :per_page => 4)
+    @users = User.reorder('email').paginate(page: params[:page], :per_page => 4)
   end
 
   def show
@@ -23,14 +23,14 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    flash[:success] = 'User deleted'
     redirect_to users_url
   end
 
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_create_params)
-      flash[:success] = "Done"
+      flash[:success] = 'Done'
     end
     render 'edit'
   end
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     else
       if @user.save
         send_activation_mail
-        flash[:info] = "Please check your email to activate your account."
+        flash[:info] = 'Please check your email to activate your account.'
         redirect_to root_path
       else
         render 'new'
