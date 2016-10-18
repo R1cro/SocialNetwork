@@ -1,5 +1,7 @@
 <li>
-  <%= gravatar_for user, size: 100 %>
+  <div class="avatar">
+    <%= image_tag user.user_profile.avatar.url if user.user_profile.avatar? %>
+  </div>
   <p> <%= link_to user.email, user %> </p>
   <h4> <%= user.user_profile.first_name %>
       <%= user.user_profile.second_name %></h4>

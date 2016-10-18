@@ -170,12 +170,12 @@ aside {
   }
 }
 
-.gravatar {
+.avatar {
   float: left;
   margin-right: 15px;
 }
 
-.gravatar_edit {
+.avatar_edit {
   margin-top: 15px;
 }
 
@@ -329,7 +329,7 @@ aside {
       color: darken(#e7e7e7, 100%);
     }
   }
-  .gravatar {
+  .avatar {
     float: left;
     margin-right: 30px;
     margin-top: 10px;
@@ -417,7 +417,7 @@ span.picture {
 .user-avatars {
   overflow: auto;
   margin-top: 10px;
-  .gravatar {
+  .avatar {
     margin: 2px 2px;
   }
   a {

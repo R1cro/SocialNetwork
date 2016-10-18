@@ -1,5 +1,5 @@
 <li id="micropost-<%= micropost.id %>">
-  <%= link_to gravatar_for(micropost.user, size: 70), micropost.user %>
+  <%= link_to avatar_for(micropost.user, 70), micropost.user %>
   <% if micropost.user.user_profile.first_name.nil? %>
     <h4><%= link_to micropost.user.email , micropost.user %></h4>
   <% else %>

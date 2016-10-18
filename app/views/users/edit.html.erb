@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, html: { multipart: true }) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <fieldset class="password-field">
           <legend> Change Password: </legend>
@@ -16,24 +16,25 @@
 
         <fieldset class="avatar-field">
           <legend> Avatar </legend>
-          <%= gravatar_for @user %>
-          <a href="http://gravatar.com/emails">change</a>
+          <%# gravatar_for @user %>
+          <!-- <a href="http://gravatar.com/emails">change</a> -->
+          <%= f.fields_for :user_profile do |up| %>
+            <%= up.file_field :avatar %>
         </fieldset>
 
         <fieldset class="personal-field">
           <legend> Personal Information: </legend>
-          <%= f.fields_for :user_profile do |up| %>
-              <%= up.label :first_name %>
-              <%= up.text_field :first_name, class: 'form-control' %>
+            <%= up.label :first_name %>
+            <%= up.text_field :first_name, class: 'form-control' %>
 
-              <%= up.label :second_name %>
-              <%= up.text_field :second_name, class: 'form-control' %>
+            <%= up.label :second_name %>
+            <%= up.text_field :second_name, class: 'form-control' %>
 
-              <%= up.label :birthday %>
-              <%= render 'shared/birthday_field', object: up %>
+            <%= up.label :birthday %>
+            <%= render 'shared/birthday_field', object: up %>
 
-              <%= up.label :city %>
-              <%= up.text_field :city, class: 'form-control' %>
+            <%= up.label :city %>
+            <%= up.text_field :city, class: 'form-control' %>
           <% end %>
         </fieldset>
 
