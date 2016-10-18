@@ -16,7 +16,7 @@ admin:
 
 User.create!(params[:admin])
 
-50.times do |n|
+50.times do
   first_name  = Faker::Name.first_name
   second_name  = Faker::Name.last_name
   email = Faker::Internet.free_email

@@ -367,9 +367,10 @@ span.picture {
 }
 
 .empty-zone {
-  padding: 10px 0;
-  h4 {
-    text-align: center;
+  text-align: center;
+  h1 {
+    padding: 0;
+    color: darken(#b3e0ff, 45%);
   }
 }
 
@@ -464,12 +465,11 @@ span.picture {
 
 #tag_cloud {
   line-height: 1.5em;
-  .s { font-size: 1.0em; color: darken(#e7e7e7, 30%); }
-  .m { font-size: 1.5em; color: darken(#e7e7e7, 50%); }
-  .l { font-size: 2.5em; color: darken(#b3e0ff, 40%); }
+  .s { font-size: 1.2em; color: darken(#e7e7e7, 30%); }
+  .m { font-size: 1.2em; color: darken(#e7e7e7, 40%); }
+  .l { font-size: 1.2em; color: darken(#b3e0ff, 40%); }
 }
 .tag-cloud-panel {
-  text-align: center;
   ol {
     list-style: none;
     padding: 0;
