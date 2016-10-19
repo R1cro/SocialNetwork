@@ -16,10 +16,15 @@
 
         <fieldset class="avatar-field">
           <legend> Avatar </legend>
-          <%# gravatar_for @user %>
-          <!-- <a href="http://gravatar.com/emails">change</a> -->
-          <%= f.fields_for :user_profile do |up| %>
-            <%= up.file_field :avatar %>
+          <div class="user-avatar">
+            <%= avatar_for @user, 100 %>
+          </div>
+          <div class="change-avatar">
+            <p> Change your avatar:
+            <%= f.fields_for :user_profile do |up| %>
+              <%= up.file_field :avatar %>
+            </p>
+          </div>
         </fieldset>
 
         <fieldset class="personal-field">

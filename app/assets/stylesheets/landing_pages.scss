@@ -30,7 +30,10 @@ p.p-center {
 }
 
 a {
-  color: darken(#e7e7e7, 70%);
+  color: darken(#e7e7e7, 60%);
+  &:hover {
+    color: darken(#639eca, 10%);
+  }
 }
 
 section {
@@ -67,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: 'Lato', sans-serif;
-  color: darken(#b3e0ff, 45%);
+  color: darken(#639eca, 10%);
   font-weight: bold;
   font-size: 2.3em;
   margin-bottom: 10px;
@@ -90,6 +93,12 @@ h4 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #639eca;
+  border-color: #639eca;
 }
 
 #logo {
@@ -118,7 +127,7 @@ footer {
   a {
     color: #555;
     &:hover {
-      color: #222;
+      color: darken(#639eca, 10%);
     }
   }
   small {
@@ -265,6 +274,14 @@ aside {
   vertical-align: middle;
 }
 
+.user-avatar {
+  padding-bottom: 20px;
+}
+
+.change-avatar {
+  padding-top: 100px;
+}
+
 .forgot-password {
   float: right;
   padding-right: 10px;
@@ -287,6 +304,8 @@ aside {
 .user-delete {
   text-align: right;
   text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
 }
 
 .image {
@@ -326,13 +345,17 @@ aside {
       color: darken(#b3e0ff, 50%);
     }
     .post-delete-link {
-      color: darken(#e7e7e7, 100%);
+      color: darken(#e7e7e7, 30%);
     }
   }
   .avatar {
     float: left;
     margin-right: 30px;
     margin-top: 10px;
+  }
+
+  .remove-post {
+   float: right;
   }
 }
 
@@ -393,7 +416,7 @@ span.picture {
     }
     &:hover {
       text-decoration: none;
-      color: #cc8800;
+      color: darken(#639eca, 10%)
     }
     strong {
       display: block;
@@ -462,7 +485,7 @@ span.picture {
   line-height: 1.5em;
   .s { font-size: 1.0em; color: darken(#e7e7e7, 30%); }
   .m { font-size: 1.5em; color: darken(#e7e7e7, 50%); }
-  .l { font-size: 2.5em; color: darken(#b3e0ff, 40%); }
+  .l { font-size: 2.5em; color: darken(#639eca, 10%); }
 }
 .tag-cloud-panel {
   text-align: center;

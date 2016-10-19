@@ -8,7 +8,7 @@
     <%= @user.email %>
   <br>
     <% if @user.user_profile&.birthday %>
-      | <%= @user.user_profile.age(@user.user_profile.birthday) %> years old.
+      <%= @user.user_profile.age(@user.user_profile.birthday) %> years old.
     <% end %>
     <%= @user&.user_profile&.city %>
   </p>

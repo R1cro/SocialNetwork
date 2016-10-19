@@ -10,9 +10,17 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
     <br>
-    #<%= raw micropost.tags.map {|t| link_to t, tag_path(t) }.join(' #') %>
-    <% if current_user?(micropost.user) %> |
-      <%= link_to 'Delete', micropost, method: :delete, data: { confirm: "Remove your post?" }, class: 'post-delete-link' %>
+    <% if micropost.tags.present? %>
+      #<%= raw micropost.tags.map {|t| link_to t, tag_path(t) }.join(' #') %>
     <% end %>
+   <span class="remove-post">
+     <% if current_user?(micropost.user) %>
+       <%= link_to micropost, method: :delete,
+                   data: { confirm: "Remove your post?" },
+                   class: 'post-delete-link' do %>
+         <i class="fa fa-lg fa-trash"></i>
+       <% end %>
+     <% end %>
+   </span>
   </span>
 </li>
