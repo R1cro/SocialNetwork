@@ -16,8 +16,8 @@
    <span class="remove-post">
      <% if current_user?(micropost.user) %>
        <%= link_to micropost, method: :delete,
-                   data: { confirm: "Remove your post?" },
-                   class: 'post-delete-link' do %>
+                              data: { confirm: "Remove your post?" },
+                              class: 'post-delete-link' do %>
          <i class="fa fa-lg fa-trash"></i>
        <% end %>
      <% end %>

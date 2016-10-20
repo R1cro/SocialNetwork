@@ -8,8 +8,9 @@
   <div class="user-delete">
     <% if logged_in? && current_user.admin? && !current_user?(user) %>
       [ <%= link_to user, method: :delete,
-                                       data: { confirm: "Remove that user? Are you sure?" } do %>
+                          data: { confirm: "Remove that user? Are you sure?" } do %>
         <i class="fa fa-lg fa-ban" aria-hidden="true"></i> Remove ]
       <% end %>
     <% end %>
   </div>
+</li>
