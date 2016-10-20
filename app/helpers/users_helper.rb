@@ -1,8 +1,12 @@
 module UsersHelper
-  def gravatar_for(user, options = { size: 80 })
-    gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
-    size = options[:size]
-    gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
-    image_tag(gravatar_url, alt: user.email, class: "gravatar")
+  DEFAULT_AVATAR = 'http://res.cloudinary.com/r1cro-socialnetwork/image/upload/v1476871369/defaultavatar_blue_msvxkv.jpg'
+
+  def avatar_for(user, size)
+    avatar_url = if user.user_profile.avatar.url.present?
+                   user.user_profile.avatar.url
+                 else
+                   DEFAULT_AVATAR
+                 end
+    image_tag(avatar_url, alt: user.email, class: "avatar", width: size)
   end
 end
