@@ -3,9 +3,9 @@ module UsersHelper
 
   def avatar_for(user, size)
     avatar_url = if user.user_profile.avatar.url.present?
-                    user.user_profile.avatar.url
+                   user.user_profile.avatar.url
                  else
-                    DEFAULT_AVATAR
+                   DEFAULT_AVATAR
                  end
     image_tag(avatar_url, alt: user.email, class: "avatar", width: size)
   end
