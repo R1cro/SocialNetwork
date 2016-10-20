@@ -22,24 +22,23 @@ User.create!(params[:admin])
   email = Faker::Internet.free_email
   password = "12345678"
   User.create!(
-               email: email,
-               password:              password,
-               password_confirmation: password,
-               activated: true,
-               activated_at: Time.zone.now,
-               admin: true,
-               user_profile_attributes:  {
-                 first_name: first_name,
-                 second_name: second_name
-               }
+    email: email,
+    password: password,
+    password_confirmation: password,
+    activated: true,
+    activated_at: Time.zone.now,
+    admin: true,
+    user_profile_attributes:  {
+      first_name: first_name,
+      second_name: second_name
+    }
   )
 end
 
 users = User.order(:created_at).take(50)
 
 20.times do
-  tag_name = Faker::Lorem.word
-  content = '#' + tag_name + Faker::Lorem.sentence(13)
+  content = Faker::Lorem.sentence(13)
   users.each { |user| user.microposts.create!(content: content) }
 end
 

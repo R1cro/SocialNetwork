@@ -27,9 +27,4 @@ class MicropostsController < ApplicationController
     redirect_to root_url if @micropost.nil?
   end
 
-  # def save_hashtags(micropost)
-  #   tags = micropost.content.scan(HASHTAG_REGEX)
-  #   micropost.tag_list.add(tags)
-  # end
-
 end
