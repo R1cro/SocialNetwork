@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20161007133829) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
-    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
+    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", using: :btree
     t.index ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
   end
 
