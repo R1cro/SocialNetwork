@@ -47,13 +47,18 @@ users = User.order(:created_at).take(50)
   users.each { |user| user.microposts.create!(content: content) }
 end
 
-# users = User.all
-# users.each do |user|
-#   x = rand(50)
-#   y = rand(x)
-#   following = users[rand(y)..rand(x)]
-#   followers = users[rand(y)..rand(x)]
-#
-#   following.each { |followed| user.follow(followed) }
-#   followers.each { |follower| follower.follow(user) }
-# end
+users = User.all
+1000.times do
+  flag = [true, false].sample
+  user1 = users.sample
+  user2 = users.sample
+  random = user1.id.to_i / user2.id.to_i
+  if flag == true
+    if user1 != user2 && !user1.followers.include?(user2) && random % 2 == 0
+      user2.follow(user1)
+    end
+    if user1 != user2 && user1.following.include?(user2) && random % 2 == 1
+      user1.unfollow(user2)
+    end
+  end
+end

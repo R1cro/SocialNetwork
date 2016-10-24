@@ -9,7 +9,6 @@ module MicropostsHelper
     micropost.content.html_safe
   end
 
-  #tag #tager
   def tag_id_by_name(name)
     ActsAsTaggableOn::Tag.find_by_name(name)&.id
   end
