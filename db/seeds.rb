@@ -48,16 +48,15 @@ users = User.order(:created_at).take(50)
 end
 
 users = User.all
-1000.times do
+2000.times do
   flag = [true, false].sample
   user1 = users.sample
   user2 = users.sample
-  random = user1.id.to_i / user2.id.to_i
   if flag == true
-    if user1 != user2 && !user1.followers.include?(user2) && random % 2 == 0
+    if user1 != user2 && !user1.followers.include?(user2) && rand(100).even?
       user2.follow(user1)
     end
-    if user1 != user2 && user1.following.include?(user2) && random % 2 == 1
+    if user1 != user2 && user1.following.include?(user2) && rand(100).even?
       user1.unfollow(user2)
     end
   end
