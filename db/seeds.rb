@@ -1,17 +1,17 @@
 params =  {
-admin:
-  {
-    email: "ateseyko@qulix.com",
-    password:              "12345678",
-    password_confirmation: "12345678",
-    activated: true,
-    activated_at: Time.zone.now,
-    admin: true,
-    user_profile_attributes:  {
-      first_name: "Anatoly",
-      second_name: "Teseyko"
+  admin:
+    {
+      email: "ateseyko@qulix.com",
+      password:              "12345678",
+      password_confirmation: "12345678",
+      activated: true,
+      activated_at: Time.zone.now,
+      admin: true,
+      user_profile_attributes:  {
+        first_name: "Anatoly",
+        second_name: "Teseyko"
+      }
     }
-  }
 }
 
 User.create!(params[:admin])

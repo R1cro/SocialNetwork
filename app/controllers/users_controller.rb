@@ -83,7 +83,7 @@ class UsersController < ApplicationController
   private
   def user_create_params
     params.require(:user).permit(:email, :password, :password_confirmation,
-                                 user_profile_attributes: [:first_name, :second_name, :city, :birthday, :id])
+                                 user_profile_attributes: [:first_name, :second_name, :city, :birthday, :avatar, :id])
   end
 
   def admin_user
