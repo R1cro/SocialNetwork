@@ -24,4 +24,5 @@ avatars/
 
 /public/uploads
 /
-
+config/database.yml
+config/cloudinary.yml

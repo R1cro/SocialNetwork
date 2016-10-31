@@ -1,3 +1,65 @@
 // Place all the styles related to the Relationships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.relationship {
+  padding-bottom: 40px;
+  font-family: 'Lato', sans-serif;
+  margin-left: 60px;
+  a {
+    float: left;
+    width: 40%;
+    border-left: 2px solid #EEE;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: darken(#639eca, 10%)
+    }
+    strong {
+      padding-bottom: 5px;
+      display: block;
+    }
+  }
+}
+
+.followers-link {
+  text-align: right;
+}
+
+.following-link {
+  text-align: left;
+}
+
+.follower-section {
+  padding: 0;
+  margin: 0;
+}
+
+.user-avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .avatar {
+    margin: 2px 2px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+#follow-form {
+  width: 100%;
+  padding: 10px;
+}
+
+.to-user-profile {
+  margin-top: 5px;
+}
+

@@ -190,19 +190,6 @@ aside {
   }
 }
 
-.avatar {
-  float: left;
-  margin-right: 15px;
-}
-
-.avatar_edit {
-  margin-top: 15px;
-}
-
-.alert {
-  text-align: center;
-}
-
 #show_row.row {
   font-family: 'Oswald', sans-serif;
   color: darken(#e7e7e7, 40%);
@@ -232,11 +219,8 @@ aside {
   }
 }
 
-#new-user {
-  margin-top: 10px;
-  font-size: small;
+.alert {
   text-align: center;
-  font-family: 'Oswald', sans-serif;
 }
 
 .dropdown-toggle {
@@ -258,123 +242,6 @@ aside {
   }
 }
 
-.birthday-field {
-  padding-bottom: 15px;
-  .bootstrap-datetimepicker-widget.dropdown-menu {
-    font-size: 0.9em;
-    color: darken(#b3e0ff, 40%);
-  }
-  .input-group-addon {
-    color: darken(#b3e0ff, 40%);
-  }
-}
-
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
-}
-
-.password-field {
-  width: 40%;
-  float: right;
-}
-
-.avatar-field {
-  width: 40%;
-  padding-bottom: 50px;
-  vertical-align: middle;
-}
-
-.user-avatar {
-  padding-bottom: 20px;
-}
-
-.change-avatar {
-  padding-top: 100px;
-}
-
-.forgot-password {
-  float: right;
-  padding-right: 10px;
-  font-size: 0.8em;
-  text-decoration: underline;
-}
-
-.users {
-  list-style: none;
-  li {
-    overflow: auto;
-    padding: 20px 0;
-    border-top: 1px solid #e7e7e7;
-    &:last-child {
-      border-bottom: 1px solid #e7e7e7;
-    }
-  }
-}
-
-.user-delete {
-  text-align: right;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-}
-
-.image {
-  padding-top: 1px;
-}
-
-.microposts {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 5px 0;
-  }
-  .user {
-    margin-top: 100em;
-    padding-top: 0;
-  }
-  .content {
-    font-size: 1.1em;
-    display: block;
-    margin-left: 115px;
-    padding-bottom: 5px;
-    a {
-      color: #639eca;
-    }
-    a:hover, a:focus, a:active {
-      color: darken(#639eca, 20%);
-    }
-  }
-
-  .post-owner {
-    padding-left: 115px;
-  }
-
-  .timestamp {
-    color: darken(#e7e7e7, 20%);
-    display: block;
-    margin-left: 105px;
-    padding: 10px;
-    a {
-      color: darken(#b3e0ff, 50%);
-    }
-    .post-delete-link {
-      color: darken(#e7e7e7, 30%);
-    }
-  }
-  .avatar {
-    float: left;
-    margin-right: 30px;
-    margin-top: 10px;
-  }
-
-  .remove-post {
-   float: right;
-  }
-
-}
-
-
 aside {
   textarea {
     height: 100px;
@@ -389,110 +256,11 @@ span.picture {
   }
 }
 
-.user-form {
-  padding: 0 10px;
-}
-
-.user-details {
- padding-bottom: 0px;
- padding-top: 0;
-  h1 {
-    padding: 8px 0;
-  }
-}
-
-.posting-form {
-  padding-top: 30px;
-}
-
 .empty-zone {
   text-align: center;
   h1 {
     padding: 0;
     color: darken(#b3e0ff, 45%);
-  }
-}
-
-.sign-up-form {
-  font-family: 'Lato', sans-serif;
-  text-transform: capitalize;
-}
-
-.relationship {
-  padding-bottom: 40px;
-  font-family: 'Lato', sans-serif;
-  margin-left: 60px;
-  a {
-    float: left;
-    width: 40%;
-    border-left: 2px solid $gray-lighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: darken(#639eca, 10%)
-    }
-    strong {
-      padding-bottom: 5px;
-      display: block;
-    }
-  }
-}
-
-.followers-link {
-  text-align: right;
-}
-
-.following-link {
-  text-align: left;
-}
-
-.follower-section {
- padding: 0;
- margin: 0;
-}
-
-.user-avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .avatar {
-    margin: 2px 2px;
-  }
-  a {
-    padding: 0;
-  }
-}
-
-.users.follow {
-  padding: 0;
-}
-
-#follow-form {
-  float: right;
-  width: 10%;
-  min-width: 100px;
-  padding-top: 30px;
-}
-.to-user-profile {
-  margin-top: 5px;
-}
-
-.user-info-feed {
-  padding-bottom: 0px;
-}
-
-.user-stat {
-  padding: 42px 0;
-  text-align: center;
-  text-transform: uppercase;
-  a {
-    &:hover {
-      text-decoration: none;
-      color: darken(#639eca, 10%)
-    }
   }
 }
 
@@ -521,16 +289,6 @@ span.picture {
     }
   }
 }
-
-.post-image {
-  margin-left: 100px;
-  display: block;
-  padding: 5px 0;
-  .container {
-    margin-left: 0;
-  }
-}
-
 
 .panel-body {
   padding: 10px 20px;
