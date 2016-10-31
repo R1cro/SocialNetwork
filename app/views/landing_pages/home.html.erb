@@ -14,10 +14,6 @@
       <% end %>
       <section class="panel panel-default tag-cloud-panel">
         <div class="panel-body">
-          <h5>#Tags
-            <span class="badge"><%= @micropost.tag_counts.count %></span>
-          </h5>
-          <hr>
           <% if @micropost&.tag_counts.empty? %>
             <div class="empty-zone">
               <h1>Sorry</h1>
@@ -25,9 +21,9 @@
             </div>
           <% else %>
             <ol>
-              <h5>Popular tags: </h5>
-              <% tag_cloud @micropost.tag_counts.sort_by(&:count).last(5), %w[s l] do |tag, css_class| %>
-                <li id="tag_cloud"><%= link_to '# ' + tag.name.upcase, tag_path(tag.id), class: css_class %></span></li>
+              <h4>Popular tags:</h4>
+              <% @micropost.tag_counts.sort_by(&:count).last(8).each do |tag| %>
+                <li><%= link_to '#' + tag.name, tag_path(tag.id) %></li>
               <% end %>
             </ol>
           <% end %>
@@ -62,6 +58,3 @@
     <%= link_to "Log in", login_path, class: "btn btn-lg" %>
   </div>
 <% end %>
-
-
-
