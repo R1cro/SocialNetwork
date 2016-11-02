@@ -14,7 +14,7 @@ module MicropostsHelper
   def find_urls(micropost)
     micropost.content.gsub!(URL_REG) do |url|
       if url[IMG_REG]
-        "<img src='#{url}' />"
+        "<img src='#{url}'/>"
       else
         "<a href='#{url}'>#{url}</a>"
       end

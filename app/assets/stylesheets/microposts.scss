@@ -1,3 +1,69 @@
 // Place all the styles related to the Microposts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 5px 0;
+  }
+  .user {
+    margin-top: 100em;
+    padding-top: 0;
+  }
+  .content {
+    font-size: 1.1em;
+    display: block;
+    margin-left: 115px;
+    padding-bottom: 5px;
+    a {
+      color: #639eca;
+    }
+    a:hover, a:focus, a:active {
+      color: darken(#639eca, 20%);
+    }
+  }
+
+  .post-owner {
+    padding-left: 115px;
+  }
+
+  .timestamp {
+    color: darken(#e7e7e7, 20%);
+    display: block;
+    margin-left: 105px;
+    padding: 10px;
+    a {
+      color: darken(#b3e0ff, 50%);
+    }
+    .post-delete-link {
+      color: darken(#e7e7e7, 30%);
+    }
+  }
+
+  .avatar {
+    float: left;
+    margin-right: 30px;
+    margin-top: 10px;
+  }
+
+  .remove-post {
+    float: right;
+  }
+
+}
+
+.image {
+  padding-top: 1px;
+}
+
+.post-image {
+  margin-left: 100px;
+  display: block;
+  padding-left: 15px;
+  padding-top: 5px;
+  .container {
+    margin-left: 0;
+  }
+}

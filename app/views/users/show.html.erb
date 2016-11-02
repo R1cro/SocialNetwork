@@ -1,31 +1,40 @@
 <% provide(:title, @user.email) %>
-</section>
 <div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <aside>
-      <section class="user-form">
-        <%= render 'user_follow_form' if logged_in? %>
+  <aside class="col-md-5">
+    <section class="user-info-feed">
+      <div class="user-profile">
         <%= render 'shared/about_user' %>
-        <% if logged_in? && @user.id == @current_user.id %>
-          <div class="posting-form">
-            <%= render 'shared/micropost_form' %>
-          </div>
-        <% end %>
-      </section>
-    </aside>
-    <% if @user.microposts.any? %>
-        <h3>User posts (<%= @user.microposts.count %>)</h3>
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts %>
-    <% else %>
-        <div class="empty-zone">
-          <hr>
-            <h1>No posts...</h1>
-            <h4>Where is your posts, dude?</h4>
-          <hr>
+      </div>
+      <div class="relationship">
+        <%= render 'shared/relationship' %>
+      </div>
+    </section>
+    <% if logged_in? && @user.id == @current_user.id %>
+      <section class="panel panel-default main-panel">
+        <div class="panel-body">
+          <%= render 'shared/micropost_form' %>
         </div>
+      </section>
+    <% end %>
+  </aside>
+  <div class="col-md-7">
+    <div class="container">
+      <h5>
+        User posts <span class="badge"><%= @user.microposts.count %></span>
+      </h5>
+    </div>
+    <% if @user.microposts.any? %>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% else %>
+      <div class="empty-zone">
+        <hr>
+          <h1>No posts...</h1>
+          <h4>Where is your posts, dude?</h4>
+        <hr>
+      </div>
     <% end %>
   </div>
 </div>

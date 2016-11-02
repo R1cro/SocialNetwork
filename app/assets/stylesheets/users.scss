@@ -1,3 +1,43 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.users {
+  list-style: none;
+  li {
+    overflow: auto;
+    padding: 20px 0;
+    border-top: 1px solid #e7e7e7;
+    &:last-child {
+      border-bottom: 1px solid #e7e7e7;
+    }
+  }
+}
+
+.user-delete {
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
+.sign-up-form {
+  font-family: 'Lato', sans-serif;
+  text-transform: capitalize;
+}
+
+.user-info-feed {
+  padding-bottom: 0px;
+}
+
+.user-stat {
+  padding: 42px 0;
+  text-align: center;
+  text-transform: uppercase;
+  a {
+    &:hover {
+      text-decoration: none;
+      color: darken(#639eca, 10%)
+    }
+  }
+}

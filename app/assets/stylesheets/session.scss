@@ -1,3 +1,22 @@
 // Place all the styles related to the Session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.forgot-password {
+  float: right;
+  padding-right: 10px;
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+
+#new-user {
+  margin-top: 10px;
+  font-size: small;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}

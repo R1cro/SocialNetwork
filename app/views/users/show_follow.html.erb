@@ -1,8 +1,12 @@
 <% provide(:title, @title) %>
 <div class="row">
   <aside class="col-md-5">
-    <section class="user-info">
-      <%= render 'shared/about_user' %>
+    <section class="user-info-feed">
+      <div class="user-profile">
+        <%= render 'shared/about_user' %>
+      </div>
+    </section>
+    <section>
       <div class="relationship">
         <%= render 'shared/relationship' %>
       </div>
@@ -19,10 +23,9 @@
   </aside>
   <div class="col-md-7">
     <% if @users.any? %>
-      <h4><%= @title %></h4>
+      <h5><%= @title %></h5>
       <ul class="users follow">
         <%= render @users %>
-        <%= render 'users/user_follow_form' %>
       </ul>
       <%= will_paginate %>
     <% else %>

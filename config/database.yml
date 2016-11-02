@@ -63,7 +63,7 @@ test:
     timeout: 5000
     host: localhost
     username: pgadmin
-    password: swseuz2U
+    password: 
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -92,4 +92,4 @@ development:
    timeout: 5000
    host: localhost
    username: pgadmin
-   password: swseuz2U
+   password: 

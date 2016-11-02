@@ -23,5 +23,6 @@ avatars/
 .idea/
 
 /public/uploads
-/
 
+/config/database.yml
+/config/cloudinary.yml

@@ -1,3 +1,50 @@
 // Place all the styles related to the User_Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.avatar {
+  float: left;
+  margin-right: 15px;
+}
+
+.avatar_edit {
+  margin-top: 15px;
+}
+
+.avatar-field {
+  width: 40%;
+  padding-bottom: 50px;
+  vertical-align: middle;
+}
+
+.user-avatar {
+  padding-bottom: 20px;
+}
+
+.change-avatar {
+  padding-top: 100px;
+}
+
+.birthday-field {
+  padding-bottom: 15px;
+  .bootstrap-datetimepicker-widget.dropdown-menu {
+    font-size: 0.9em;
+    color: darken(#b3e0ff, 40%);
+  }
+  .input-group-addon {
+    color: darken(#b3e0ff, 40%);
+  }
+}
+
+.password-field {
+  width: 40%;
+  float: right;
+}
+
+.user-details {
+  padding-bottom: 0px;
+  padding-top: 0;
+  h1 {
+    padding: 8px 0;
+  }
+}

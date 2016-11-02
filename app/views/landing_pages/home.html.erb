@@ -1,34 +1,36 @@
 <% provide(:title, 'Feed') %>
 <% if logged_in?  %>
   <div class="row">
-    <aside class="col-md-4">
+    <aside class="col-md-5">
       <section class="user-info-feed">
         <%= render 'shared/about_user' %>
-        <div class="relationship">
-          <%= render 'shared/relationship' %>
-        </div>
-        <% if logged_in? && @user.id == @current_user.id %>
-          <%= render 'shared/micropost_form' %>
-        <% end %>
       </section>
-      <section class="tag-cloud-panel">
-        <h4>Popular #tags</h4>
-        <hr>
-        <% if @micropost&.tag_counts.empty? %>
-          <div class="empty-zone">
-            <h1>Sorry</h1>
-            <h4>No #tags :(</h4>
+      <% if logged_in? && @user.id == @current_user.id %>
+        <section class="panel panel-default main-panel">
+          <div class="panel-body">
+            <%= render 'shared/micropost_form' %>
           </div>
-        <% else %>
-          <ol>
-          <% tag_cloud @micropost.tag_counts, %w[s m l] do |tag, css_class| %>
-            <li id="tag_cloud"><%= link_to tag.name, tag_path(tag.id), class: css_class %></li>
+        </section>
+      <% end %>
+      <section class="panel panel-default tag-cloud-panel">
+        <div class="panel-body">
+          <% if @micropost&.tag_counts.empty? %>
+            <div class="empty-zone">
+              <h1>Sorry</h1>
+              <h4>No #tags :(</h4>
+            </div>
+          <% else %>
+            <ol>
+              <h4>Popular tags:</h4>
+              <% @micropost.tag_counts.sort_by(&:count).last(8).each do |tag| %>
+                <li><%= link_to '#' + tag.name, tag_path(tag.id) %></li>
+              <% end %>
+            </ol>
           <% end %>
-          </ol>
-        <% end %>
+        </div>
       </section>
     </aside>
-      <div class="col-md-8">
+      <div class="col-md-7">
         <% if @feed_items.any? %>
           <%= render 'shared/feed' %>
         <% else %>
@@ -56,6 +58,3 @@
     <%= link_to "Log in", login_path, class: "btn btn-lg" %>
   </div>
 <% end %>
-
-
-
