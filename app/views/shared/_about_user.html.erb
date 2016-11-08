@@ -16,5 +16,7 @@
       </p>
     </div>
   </div>
-  <%= render 'users/user_follow_form' %>
+  <% if logged_in? %>
+    <%= render 'users/user_follow_form' %>
+  <% end %>
 </div>

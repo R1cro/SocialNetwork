@@ -1,4 +1,6 @@
-<%= form_for :like, url: micropost_like_path(1), method: :delete, remote: true do |f| %>
-    <%= f.submit "Unlike", class: "btn btn-primary"  %>
+<%= form_for :like, url: micropost_like_path(micropost.id), method: :delete, remote: true do |f| %>
+    <%= f.button do %>
+      <i class="fa fa-heart" aria-hidden="true"></i>
+    <% end %>
 <% end %>
 

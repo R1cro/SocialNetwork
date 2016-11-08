@@ -1,4 +1,6 @@
-<%= form_for :like, url: micropost_like_path(1), remote: true do |f| %>
+<%= form_for :like, url: micropost_like_path(micropost.id), remote: true do |f| %>
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit "Like", class: "btn btn-primary" %>
+    <%= f.button do %>
+      <i class="fa fa-heart-o" aria-hidden="true"></i>
+    <% end %>
 <% end %>
