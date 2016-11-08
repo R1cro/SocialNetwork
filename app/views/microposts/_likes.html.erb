@@ -1,0 +1,6 @@
+<% @user ||= current_user %>
+<% if logged_in? %>
+  <strong id="likes">
+    Likes <span class="badge"><%= @micropost.likes.count %></span>
+  </strong>
+<% end %>

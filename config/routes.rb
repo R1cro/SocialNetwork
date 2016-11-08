@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'session/new'
 
   get  '/help',    to: 'landing_pages#help'
@@ -15,9 +16,14 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :microposts do
+    resource :like, only: [:create, :destroy]
+  end
+
+
   resources :forgot_password, only: [:new, :create, :edit, :update]
   resources :account_activations, only: [:edit]
-  resources :microposts, only: [:create, :destroy]
+  #resources :microposts, only: [:create, :destroy]
   resources :tags, only: [:show]
   resources :relationships, only: [:create, :destroy]
 

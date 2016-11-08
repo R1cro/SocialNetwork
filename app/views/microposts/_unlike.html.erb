@@ -1,0 +1,4 @@
+<%= form_for :like, url: micropost_like_path(1), method: :delete, remote: true do |f| %>
+    <%= f.submit "Unlike", class: "btn btn-primary"  %>
+<% end %>
+

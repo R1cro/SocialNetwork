@@ -1,0 +1,2 @@
+$("#like-form").html("<%= escape_javascript(render('microposts/unlike'))%>");
+$("#likes").html('Likes <span class="badge"><%= @micropost.likes.count %></span>');
