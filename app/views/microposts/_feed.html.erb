@@ -4,6 +4,8 @@
     </div>
   <ol class="microposts">
     <%= render @feed_items %>
+    <%= render partial: 'microposts/like_form', locals: { feed_items: @micropost } %>
+    <%= render partial: 'microposts/likes', locals: { micropost: @micropost } %>
   </ol>
   <% if logged_in? %>
     <%= will_paginate @feed_items %>

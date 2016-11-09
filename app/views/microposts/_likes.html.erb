@@ -1,5 +1,5 @@
-<% if logged_in? %>
-  <strong id="likes">
-    <span class="badge"><%= micropost.likes.count %></span>
-  </strong>
-<% end %>
+  <div id="likes">
+    <% if logged_in? %>
+      <span class="badge"><%= micropost.likes.count %></span>
+    <% end %>
+  </div>

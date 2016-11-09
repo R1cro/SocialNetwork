@@ -2,10 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#like-form {
-  display: inline;
-  padding: 10px;
+.like-panel {
+  padding-top: 15px;
+  margin-left: 115px;
+  #likes-form {
+    float: left;
+    padding-right: 5px;
+  }
   #likes {
-    float: right;
+    padding-top: 2px;
   }
 }

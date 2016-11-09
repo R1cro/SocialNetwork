@@ -1,2 +1,2 @@
-$("#like-form").html("<%= escape_javascript(render('microposts/like'))%>");
+$("#likes-form").html("<%= escape_javascript(render 'microposts/like')%>");
 $("#likes").html(<%= @micropost.likes.count %>);
