@@ -18,10 +18,5 @@ class LandingPagesController < ApplicationController
 
   def contact
   end
-  private
-    def redirect_to_profile
-      if current_user != nil
-        redirect_to current_user
-      end
-    end
+
 end

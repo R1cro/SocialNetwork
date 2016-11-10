@@ -5,11 +5,11 @@
 .like-panel {
   padding-top: 15px;
   margin-left: 115px;
-  #likes-form {
+  div[id|="likes-form"] {
     float: left;
     padding-right: 5px;
   }
-  #likes {
+  div[id|="like-count"] {
     padding-top: 2px;
   }
 }

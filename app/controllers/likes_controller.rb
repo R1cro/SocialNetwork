@@ -1,6 +1,11 @@
 class LikesController < ApplicationController
   before_action :set_micropost
 
+  def show
+    users_liked = Like.select(:user_id).where(micropost_id: params[:micropost_id])
+    @users = User.find_by(id: users_liked)
+  end
+
   def create
     @like = Like.new(like_params)
     @like.micropost_id = @micropost.id

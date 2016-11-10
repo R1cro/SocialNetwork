@@ -10,8 +10,8 @@
       <span class="content"><%= process_content(micropost) %></span>
       <div class="post-image"><%= image_tag micropost.image.url if micropost.image? %></div>
       <div class="like-panel">
-        <%= render partial: 'microposts/like_form', locals: { micropost: micropost } %>
-        <%= render partial: 'microposts/likes', locals: { micropost: micropost } %>
+        <%= render 'microposts/like_form', micropost: micropost %>
+        <%= render 'microposts/likes', micropost: micropost  %>
       </div >
       <span class="timestamp">
         Posted <%= time_ago_in_words(micropost.created_at) %> ago.
