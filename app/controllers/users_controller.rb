@@ -80,6 +80,12 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def posts_liked_by
+    @user = User.find(params[:id])
+    liked_microposts = Like.select(:micropost_id).where(user_id: params[:id])
+    @microposts_liked_by_user = Micropost.where(id: liked_microposts)
+  end
+
   private
   def user_create_params
     params.require(:user).permit(:email, :password, :password_confirmation,

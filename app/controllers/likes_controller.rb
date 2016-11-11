@@ -3,7 +3,7 @@ class LikesController < ApplicationController
 
   def show
     users_liked = Like.select(:user_id).where(micropost_id: params[:micropost_id])
-    @users = User.find_by(id: users_liked)
+    @users = User.where(id: users_liked)
   end
 
   def create
