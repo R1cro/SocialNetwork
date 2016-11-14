@@ -18,5 +18,4 @@ class LandingPagesController < ApplicationController
 
   def contact
   end
-
 end

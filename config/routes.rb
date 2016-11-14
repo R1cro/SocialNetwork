@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      get :following, :followers, :posts_liked_by
+      get :following, :followers, :liked_posts
     end
   end
 

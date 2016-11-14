@@ -80,10 +80,9 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
-  def posts_liked_by
+  def liked_posts
     @user = User.find(params[:id])
-    liked_microposts = Like.select(:micropost_id).where(user_id: params[:id])
-    @microposts_liked_by_user = Micropost.where(id: liked_microposts)
+    @liked_posts = @user.liked_microposts
   end
 
   private

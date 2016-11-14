@@ -1,3 +1,9 @@
 $("#likes-form-<%= @micropost.id %>").html("<%= escape_javascript(render 'microposts/like', micropost: @micropost)%>");
-$("#like-count-<%= @micropost.id %>").html('<span class="badge"><%= @micropost.likes.count %></span><% if @micropost.likes.count != 0 %> | <%= link_to 'Who likes?', micropost_like_url(@micropost.id) %><% end %>');
-
+$("#like-count-<%= @micropost.id %>").html(
+  '<% if @micropost.likes.count != 0 %>' +
+    '<span class="badge liked">' +
+      '<%= link_to @micropost.likes.count, micropost_like_url(@micropost.id) %>' +
+    '</span>' +
+  '<% else %>' +
+    '<span class="badge"><%= @micropost.likes.count %></span>' +
+  '<% end %>');

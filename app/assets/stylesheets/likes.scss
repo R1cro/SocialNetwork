@@ -7,9 +7,25 @@
   margin-left: 115px;
   div[id|="likes-form"] {
     float: left;
-    padding-right: 5px;
+    padding-right: 1px;
+    button {
+      border: none;
+      background: none;
+      .fa.fa-heart {
+        color: darken(#639eca, 10%);
+      }
+    }
   }
   div[id|="like-count"] {
     padding-top: 2px;
   }
+  .liked a {
+    text-decoration: none;
+    color: white;
+  }
 }
+
+.badge.liked {
+  background: linear-gradient(rgba(40, 84, 118, 0.5), rgba(99, 158, 202, 1) );
+}
+
