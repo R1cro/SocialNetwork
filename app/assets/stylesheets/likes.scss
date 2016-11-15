@@ -15,10 +15,11 @@
         color: darken(#639eca, 10%);
       }
     }
+    button:focus {
+      outline: none;
+    }
   }
-  div[id|="like-count"] {
-    padding-top: 2px;
-  }
+
   .liked a {
     text-decoration: none;
     color: white;

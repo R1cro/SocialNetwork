@@ -9,3 +9,8 @@
     Followers <span class="badge"><%= @user.followers.count %></span>
   </strong>
 </a>
+<a class="liked-link" href="<%= liked_posts_user_path(@user) %>">
+  <strong id="liked">
+    Liked <span class="badge"><%= @user.likes.count %></span>
+  </strong>
+</a>
