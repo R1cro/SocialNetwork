@@ -1,7 +1,7 @@
 class Micropost < ApplicationRecord
   HASHTAG_REGEX = /(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/i
   belongs_to :user
-  has_many :likes
+  has_many :likes, dependent: :destroy
   acts_as_taggable_on :tags
   default_scope -> { order(created_at: :desc) }
   mount_uploader :image, ImageUploader

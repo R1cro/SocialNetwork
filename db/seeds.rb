@@ -64,3 +64,10 @@ users = User.all
     end
   end
 end
+
+10000.times do
+  flag = [true, false].sample
+  if flag == true
+   Like.find_or_create_by(user_id: rand(50), micropost_id: rand(1000))
+  end
+end
