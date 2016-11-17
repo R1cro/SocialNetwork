@@ -2,22 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.relationship {
-  padding-bottom: 40px;
+.statistics {
   font-family: 'Lato', sans-serif;
-  margin-left: 60px;
+  padding-bottom: 40px;
   a {
     float: left;
-    width: 40%;
     border-left: 2px solid #EEE;
     color: gray;
+    padding: 0 10px;
     &:first-child {
-      padding-left: 0;
       border: 0;
+      margin-left: 10px;
+    }
+    &:last-child {
+      float: right;
+      margin-right: 10px;
+      .badge {
+        background: linear-gradient(rgba(40, 84, 118, 0.5), rgba(99, 158, 202, 1) );
+      }
     }
     &:hover {
       text-decoration: none;
-      color: darken(#639eca, 10%)
+      color: darken(#639eca, 10%);
     }
     strong {
       padding-bottom: 5px;

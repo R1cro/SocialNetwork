@@ -1,0 +1,9 @@
+$("#likes-form-<%= @micropost.id %>").html("<%= escape_javascript(render 'microposts/unlike', micropost: @micropost )%>");
+$("#like-count-<%= @micropost.id %>").html(
+  '<% if @micropost.likes.count != 0 %>' +
+    '<span class="badge liked">' +
+      '<%= link_to @micropost.likes.count, micropost_like_url(@micropost.id) %>' +
+    '</span>' +
+  '<% else %>' +
+    '<span class="badge"><%= @micropost.likes.count %></span>' +
+  '<% end %>');

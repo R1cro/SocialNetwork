@@ -80,6 +80,11 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def liked_posts
+    @user = User.find(params[:id])
+    @liked_posts = @user.liked_microposts
+  end
+
   private
   def user_create_params
     params.require(:user).permit(:email, :password, :password_confirmation,

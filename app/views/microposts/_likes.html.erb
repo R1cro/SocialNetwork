@@ -1,0 +1,9 @@
+<% if logged_in? %>
+  <div id="like-count-<%= micropost.id %>">
+    <% if micropost.likes.count != 0 %>
+      <span class="badge liked"><%= link_to micropost.likes.count, micropost_like_url(micropost.id) %></span>
+    <% else %>
+      <span class="badge"><%= micropost.likes.count %></span>
+    <% end %>
+  </div>
+<% end %>
