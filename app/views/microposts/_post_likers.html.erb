@@ -1,0 +1,7 @@
+<% if logged_in? %>
+  <div class="user-avatars">
+    <% micropost.likes.each do |like| %>
+        <%= link_to avatar_for(like.user, 40), @user %>
+    <% end %>
+  </div>
+<% end %>
