@@ -1,0 +1,13 @@
+<div>
+  <%= form_for(:reply, url: micropost_reply_path(micropost.id),  html: { multipart: true }) do |f| %>
+    <%# render 'shared/error_messages', object: f.object %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div class="post-field">
+      <%= f.text_area :content, placeholder: 'Your reply...', class: 'form-control' %>
+    </div>
+    <span class="image">
+      <%= f.file_field(:image) %>
+    </span>
+    <%= f.submit 'Reply', class: 'btn btn-primary' %>
+  <% end %>
+</div>

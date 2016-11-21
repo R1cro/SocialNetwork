@@ -9,8 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
-    @micropost = current_user.microposts.build if logged_in?
+    show_microposts
   end
 
   def new
@@ -85,6 +84,11 @@ class UsersController < ApplicationController
     @liked_posts = @user.liked_microposts.paginate(page: params[:page], per_page: 10)
   end
 
+  def show_microposts
+    @microposts = @user.microposts.paginate(page: params[:page])
+    @micropost = current_user.microposts.build if logged_in?
+  end
+
   private
   def user_create_params
     params.require(:user).permit(:email, :password, :password_confirmation,
@@ -94,5 +98,4 @@ class UsersController < ApplicationController
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
-
 end

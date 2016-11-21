@@ -1,14 +1,20 @@
 class Micropost < ApplicationRecord
   HASHTAG_REGEX = /(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/i
+
+  before_create :save_hashtags
+
   belongs_to :user
+
   has_many :likes, dependent: :destroy
+  has_many :replies, dependent: :destroy
+
   acts_as_taggable_on :tags
   default_scope -> { order(created_at: :desc) }
   mount_uploader :image, ImageUploader
+
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 200 }, allow_nil: false
   validate  :image_size
-  before_create :save_hashtags
 
   def liked_by?(user)
      self.likes.where(user: user).present?

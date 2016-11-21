@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   resources :microposts do
     resource :like, only: [:show, :create, :destroy]
+    resource :reply, only: [:create, :destroy]
   end
 
   resources :forgot_password, only: [:new, :create, :edit, :update]

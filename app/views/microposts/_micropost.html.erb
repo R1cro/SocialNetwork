@@ -14,18 +14,19 @@
         <%= render 'microposts/likes', micropost: micropost  %>
         <%= render 'microposts/post_likers', micropost: micropost %>
       </div >
-      <span class="timestamp">
-        Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-       <span class="remove-post">
-         <% if current_user?(micropost.user) %>
-           <%= link_to micropost, method: :delete,
-                                  data: { confirm: "Remove your post?" },
-                                  class: 'post-delete-link' do %>
-             <i class="fa fa-lg fa-trash"></i>
-           <% end %>
-         <% end %>
-       </span>
+      <span class="timestamp">Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+        <span class="remove-post">
+        <% if current_user?(micropost.user) %>
+          <%= link_to micropost, method: :delete,
+                                data: { confirm: "Remove your post?" },
+                                class: 'post-delete-link' do %>
+          <i class="fa fa-lg fa-trash"></i>
+          <% end %>
+        <% end %>
+        </span>
       </span>
+      <%= render 'replies/reply', micropost: micropost %>
+      <%= render 'replies/reply_form', micropost: micropost %>
     </li>
   </div>
 </div>
