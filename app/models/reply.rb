@@ -4,7 +4,7 @@ class Reply < ApplicationRecord
 
   validates :content, presence: true, length: { maximum: 200 }, allow_nil: false
   validate  :image_size
-  mount_uploader :image, ImageUploader
+  mount_uploader :image, ReplyUploader
 
   def image_size
     if image.size > 10.megabyte

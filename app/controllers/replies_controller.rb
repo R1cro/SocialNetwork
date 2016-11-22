@@ -4,18 +4,30 @@ class RepliesController < ApplicationController
   def create
     @reply = Reply.new(reply_params)
     @reply.micropost_id = @micropost.id
-    if @reply.save
-      redirect_to :back
-    else
-      redirect_to :back, flash: { danger: @micropost.errors.full_messages.join('<br><li>') }
+    @reply.save
+    respond_to do |format|
+      format.html {
+        if @reply.save
+          redirect_to :back
+        else
+          redirect_to :back, flash: { danger: @micropost.errors.full_messages.join('<br><li>') }
+        end
+      }
+      format.js
     end
+
   end
 
   def destroy
     @reply = Reply.find_by(id: params[:micropost_id])
     @reply.destroy
-    flash[:success] = 'Your reply deleted!'
-    redirect_to request.referrer
+    respond_to do |format|
+      format.html {
+        flash[:success] = 'Your reply deleted!'
+        redirect_to request.referrer
+      }
+      format.js
+    end
   end
 
   private

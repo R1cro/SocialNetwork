@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <li id="micropost-<%= micropost.id %>">
-      <%= link_to avatar_for(micropost.user, 80), micropost.user %>
+      <%= link_to avatar_for(micropost.user, 0), micropost.user %>
       <% if micropost.user.user_profile.first_name.nil? %>
         <h4 class="post-owner"><%= link_to micropost.user.email , micropost.user %></h4>
       <% else %>
@@ -25,8 +25,14 @@
         <% end %>
         </span>
       </span>
-      <%= render 'replies/reply', micropost: micropost %>
-      <%= render 'replies/reply_form', micropost: micropost %>
+      <% if logged_in? %>
+        <hr>
+        <div class="replies-panel">
+          <%= render 'replies/reply', micropost: micropost %>
+        </div>
+        <hr>
+        <%= render 'replies/reply_form', micropost: micropost %>
+      <% end %>
     </li>
   </div>
 </div>

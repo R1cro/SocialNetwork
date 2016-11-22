@@ -1,9 +1,9 @@
-<div>
-  <%= form_for(:reply, url: micropost_reply_path(micropost.id),  html: { multipart: true }) do |f| %>
+<div id="reply-form-<%= micropost.id %>">
+  <%= form_for(:reply, url: micropost_reply_path(micropost.id), html: { multipart: true }, remote: true) do |f| %>
     <%# render 'shared/error_messages', object: f.object %>
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <div class="post-field">
-      <%= f.text_area :content, placeholder: 'Your reply...', class: 'form-control' %>
+    <div class="reply-field">
+      <%= f.text_area :content, placeholder: 'Your reply', class: 'form-control', id: "reply-textarea-#{micropost.id}", rows: 2 %>
     </div>
     <span class="image">
       <%= f.file_field(:image) %>

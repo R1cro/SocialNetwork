@@ -1,3 +1,70 @@
 // Place all the styles related to the Replies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.replies-panel {
+ margin: auto;
+ width: 85%;
+}
+
+ol[id|="replies"] {
+  list-style: none;
+  padding: 0;
+  li[id|="reply-"] {
+    padding: 5px 0;
+  }
+  .user {
+    margin-top: 100em;
+    padding-top: 0;
+  }
+  .reply-content {
+    font-size: 1.1em;
+    display: block;
+    margin-left: 100px;
+    padding-bottom: 5px;
+    a {
+      color: #639eca;
+    }
+    a:hover, a:focus, a:active {
+      color: darken(#639eca, 20%);
+    }
+  }
+
+  .reply-owner {
+    padding-left: 100px;
+  }
+
+  .timestamp {
+    color: darken(#e7e7e7, 20%);
+    display: block;
+    margin-left: 90px;
+    padding: 10px;
+    a {
+      color: darken(#b3e0ff, 50%);
+    }
+    .reply-delete-link {
+      color: darken(#e7e7e7, 30%);
+    }
+  }
+
+  .avatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .remove-reply {
+    float: right;
+  }
+
+}
+
+.reply-image {
+  margin-left: 85px;
+  display: block;
+  padding-left: 15px;
+  padding-top: 5px;
+  .container {
+    margin-left: 0;
+  }
+}

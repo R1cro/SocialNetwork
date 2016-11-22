@@ -1,18 +1,18 @@
-<hr>
-<ol class="microposts">
+<ol id="replies-<%= micropost.id %>">
   <% if micropost.replies.any? %>
     <% micropost.replies.each do |reply| %>
-      <li id="micropost-<%= reply.id %>">
-        <%= link_to avatar_for(reply.user, 60), reply.user %>
-        <h4 class="post-owner"><%= link_to reply.user.email , reply.user %></h4>
-        <span class="content"><%= reply.content %></span>
+      <li id="reply-<%= reply.id %>">
+        <%= link_to avatar_for(reply.user, 65), reply.user %>
+        <h4 class="reply-owner"><%= link_to reply.user.email , reply.user %></h4>
+        <span class="reply-content"><%= reply.content %></span>
+        <div class="reply-image"><%= image_tag reply.image.url if reply.image? %></div>
         <span class="timestamp">
           Reply <%= time_ago_in_words(reply.created_at) %> ago.
-        <span class="remove-post">
+        <span class="remove-reply">
         <% if current_user?(reply.user) %>
-          <%= link_to micropost_reply_path(reply.id), method: :delete,
+          <%= link_to micropost_reply_path(reply.id), method: :delete, remote: true,
                      data: { confirm: "Remove your reply?" },
-                     class: 'post-delete-link' do %>
+                     class: 'reply-delete-link' do %>
             <i class="fa fa-lg fa-trash"></i>
           <% end %>
         <% end %>
@@ -28,4 +28,3 @@
     </div>
   <% end %>
 </ol>
-<hr>
