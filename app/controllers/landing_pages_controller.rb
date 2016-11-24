@@ -4,7 +4,7 @@ class LandingPagesController < ApplicationController
     if logged_in?
       @user = current_user
       @micropost  =  @user.microposts.build
-      @feed_items =  @user.feed.paginate(page: params[:page])
+      @feed_items =  @user.feed.paginate(page: params[:page], :per_page => 4)
     else
       @feed_items =  Micropost.order('created_at').paginate(page: params[:page], :per_page => 7)
     end

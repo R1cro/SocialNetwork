@@ -308,3 +308,11 @@ span.picture {
   margin: 10px 0;
 }
 
+#loading {
+  display: none;
+  margin: auto;
+  width: 200px;
+  img {
+    width: 200px;
+  }
+}

@@ -3,7 +3,7 @@
     <%# render 'shared/error_messages', object: f.object %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <div class="reply-field">
-      <%= f.text_area :content, placeholder: 'Your reply', class: 'form-control', id: "reply-textarea-#{micropost.id}", rows: 2 %>
+      <%= f.text_area :content, placeholder: 'Your reply', class: 'form-control', id: "reply-textarea-#{micropost.id}", rows: 1 %>
     </div>
     <span class="image">
       <%= f.file_field(:image) %>

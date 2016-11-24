@@ -1,0 +1,4 @@
+$("#reply-to-micropost-<%= @micropost.id %>").hide();
+$("#show-replies-<%= @micropost.id %>").on("click", function(){
+  $("#reply-to-micropost-<%= @micropost.id %>").slideToggle(1000);
+});

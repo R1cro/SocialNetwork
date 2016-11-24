@@ -10,7 +10,7 @@ class RepliesController < ApplicationController
         if @reply.save
           redirect_to :back
         else
-          redirect_to :back, flash: { danger: @micropost.errors.full_messages.join('<br><li>') }
+          redirect_to :back, flash: { danger: @reply.errors.full_messages.join('<br><li>') }
         end
       }
       format.js
@@ -28,6 +28,7 @@ class RepliesController < ApplicationController
       }
       format.js
     end
+
   end
 
   private

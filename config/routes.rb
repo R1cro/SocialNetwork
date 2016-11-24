@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :forgot_password, only: [:new, :create, :edit, :update]
   resources :account_activations, only: [:edit]
   resources :microposts, only: [:create, :destroy]
-  resources :tags, only: [:show]
+  resources :tags, only: [:show, :show_microposts, :show_replies]
   resources :relationships, only: [:create, :destroy]
 
   root 'landing_pages#home'
