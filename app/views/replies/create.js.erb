@@ -1,0 +1,2 @@
+$("#replies-<%= @micropost.id %>").hide().fadeIn(500).html("<%= escape_javascript(render 'replies/reply', micropost: @micropost)%>");
+$("#reply-textarea-<%= @micropost.id %>").val('')

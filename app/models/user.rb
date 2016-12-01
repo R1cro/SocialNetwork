@@ -7,14 +7,12 @@ class User < ApplicationRecord
   before_save :downcase_email
   before_create :create_activation_digest
 
-  validates :email, presence: true, length: { maximum: 40 },
-                                    format: { with: VALID_EMAIL_REGEX },
-                                    uniqueness: { case_sensitive: false }
-  has_secure_password
-
   has_many :microposts, dependent: :destroy
+
   has_many :likes
   has_many :liked_microposts, through: :likes, source: :micropost
+
+  has_many :replies
 
   has_many :active_relationships, class_name: 'Relationship',
                                   foreign_key: 'follower_id',
@@ -27,11 +25,15 @@ class User < ApplicationRecord
   has_many :followers, through: :passive_relationships, source: :follower
 
   has_one :user_profile, inverse_of: :user, dependent: :destroy
-
   accepts_nested_attributes_for :user_profile
 
+  has_secure_password
   validates :password, presence:  true, length: { minimum: 6 },
                                     format: { with: PASSWORD_FORMAT },  allow_nil: true
+
+  validates :email, presence: true, length: { maximum: 40 },
+            format: { with: VALID_EMAIL_REGEX },
+            uniqueness: { case_sensitive: false }
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -106,5 +108,4 @@ class User < ApplicationRecord
     Micropost.where("user_id IN (#{following_ids})
                      OR user_id = :user_id", user_id: id)
   end
-
 end

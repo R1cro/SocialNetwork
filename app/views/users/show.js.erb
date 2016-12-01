@@ -1,0 +1,10 @@
+$('.microposts').append('<%= j render(@microposts) %>');
+$("div[id|='reply-to-micropost']").hide()
+<% if @microposts.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@microposts) %>');
+  $('#loading').hide();
+<% else %>
+  $('.pagination').remove();
+  $('#loading').remove();
+<% end %>
+<% sleep 1 %>

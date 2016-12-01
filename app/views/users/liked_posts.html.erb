@@ -2,4 +2,7 @@
 <ol class="microposts">
   <%= render @liked_posts %>
 </ol>
-<%= will_paginate @liked_posts %>
+<div id="scrolling">
+  <div id="loading"><img src="/ajax-loader.gif" alt="Loading..."></div>
+  <%= will_paginate @liked_posts %>
+</div>

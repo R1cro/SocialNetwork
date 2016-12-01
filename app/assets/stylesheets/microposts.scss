@@ -32,7 +32,7 @@
   .timestamp {
     color: darken(#e7e7e7, 20%);
     display: block;
-    margin-left: 105px;
+    margin-left: 125px;
     padding: 10px;
     a {
       color: darken(#b3e0ff, 50%);
@@ -67,3 +67,49 @@
     margin-left: 0;
   }
 }
+
+button[id|="show-replies"] {
+  font-family: 'Oswald', sans-serif;
+  color: darken(#b3e0ff, 50%);
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  padding-bottom: 5px;
+}
+
+button[id|="show-replies"]:focus {
+  outline: none;
+}
+
+#dropzone-upload {
+  display: none;
+  margin: auto;
+  width: 100%;
+  background: linear-gradient(rgba(40, 84, 118, 0.1), rgba(99, 158, 202, 0.4) );
+}
+
+.micropost-form.dropzone {
+  border: 0px;
+  padding: 0px;
+  min-height: 90px;
+
+  .dz-success-mark, .dz-error-mark {
+    display: none;
+  }
+
+  a.dz-remove {
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .well {
+    background: linear-gradient(rgba(40, 84, 118, 0.1), rgba(99, 158, 202, 0.2) );
+    border-color: rgba(0, 133, 239, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(28, 167, 239, 0.6);
+    outline: 0 none;
+  }
+
+}
+
+

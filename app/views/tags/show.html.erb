@@ -1,4 +1,54 @@
-<h1>#<%= @tag.name %></h1>
-<ol class="microposts">
-  <%= render @micropost %>
+<ol id="replies">
+<h4>#Microposts</h4>
+<div class="panel panel-default">
+  <div class="panel-body">
+  <% @tagged_microposts.each do |micropost| %>
+    <li id="reply-<%= micropost.id %>">
+      <%= link_to avatar_for(micropost.user, 65), micropost.user %>
+      <h4 class="reply-owner"><%= link_to micropost.user.email , micropost.user %></h4>
+      <span class="reply-content"><%= process_content(micropost) %></span>
+      <div class="reply-image"><%= image_tag micropost.image.url if micropost.image? %></div>
+      <span class="timestamp">
+        Reply <%= time_ago_in_words(micropost.created_at) %> ago.
+      <span class="remove-reply">
+      <% if current_user?(micropost.user) %>
+        <%= link_to micropost, method: :delete, remote: true,
+                    data: { confirm: "Remove your reply?" },
+                    class: 'reply-delete-link' do %>
+          <i class="fa fa-lg fa-trash"></i>
+        <% end %>
+      <% end %>
+      </span>
+      </span>
+    </li>
+        <hr>
+  <% end %>
+  </div>
+</div>
+<h4>#Replies</h4>
+<div class="panel panel-default">
+  <div class="panel-body">
+  <% @reply_tags.each do |reply| %>
+      <li id="reply-<%= reply.id %>">
+        <%= link_to avatar_for(reply.user, 65), reply.user %>
+        <h4 class="reply-owner"><%= link_to reply.user.email , reply.user %></h4>
+        <span class="reply-content"><%= process_content(reply) %></span>
+        <div class="reply-image"><%= image_tag reply.image.url if reply.image? %></div>
+        <span class="timestamp">
+          Reply <%= time_ago_in_words(reply.created_at) %> ago.
+        <span class="remove-reply">
+        <% if current_user?(reply.user) %>
+          <%= link_to micropost_reply_path(reply.id), method: :delete, remote: true,
+                      data: { confirm: "Remove your reply?" },
+                      class: 'reply-delete-link' do %>
+            <i class="fa fa-lg fa-trash"></i>
+          <% end %>
+        <% end %>
+        </span>
+        </span>
+      </li>
+  <% end %>
+  </div>
+</div>
 </ol>
+

@@ -1,6 +1,8 @@
 class UserProfile < ApplicationRecord
   belongs_to :user, inverse_of: :user_profile
+
   mount_uploader :avatar, AvatarUploader
+
   validate  :avatar_size
 
   def age(birthday)

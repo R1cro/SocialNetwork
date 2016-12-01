@@ -1,7 +1,7 @@
 <% if logged_in? %>
-  <div class="user-avatars">
-    <% micropost.likes.each do |like| %>
-        <%= link_to avatar_for(like.user, 40), @user %>
+  <div id="liker-avatars-<%= micropost.id %>">
+    <% micropost.likes.last(7).reverse.each do |like| %>
+      <%= link_to avatar_for(like.user, 40), like.user, id: "user-avatar-#{like.user.id}" %>
     <% end %>
   </div>
 <% end %>

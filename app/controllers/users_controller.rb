@@ -4,13 +4,12 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def index
-    @users = User.reorder('email').paginate(page: params[:page], :per_page => 4)
+    @users = User.reorder('email').paginate(page: params[:page], per_page: 6)
   end
 
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts.paginate(page: params[:page])
-    @micropost = current_user.microposts.build if logged_in?
+    show_microposts
   end
 
   def new
@@ -69,20 +68,25 @@ class UsersController < ApplicationController
   def following
     @title = 'Following'
     @user = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page], :per_page => 30)
+    @users = @user.following
     render 'show_follow'
   end
 
   def followers
     @title = 'Followers'
     @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page], per_page: 30)
+    @users = @user.followers
     render 'show_follow'
   end
 
   def liked_posts
     @user = User.find(params[:id])
-    @liked_posts = @user.liked_microposts.paginate(page: params[:page], per_page: 10)
+    @liked_posts = @user.liked_microposts.paginate(page: params[:page], per_page: 5)
+  end
+
+  def show_microposts
+    @microposts = @user.microposts.paginate(page: params[:page], per_page: 5)
+    @micropost = current_user.microposts.build if logged_in?
   end
 
   private
@@ -94,5 +98,4 @@ class UsersController < ApplicationController
   def admin_user
     redirect_to(root_url) unless current_user.admin?
   end
-
 end

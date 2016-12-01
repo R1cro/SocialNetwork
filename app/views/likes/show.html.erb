@@ -1,5 +1,8 @@
 <h1>Post liked by: </h1>
-<ol class="users">
+<div class="users">
   <%= render @users %>
-</ol>
-<%= will_paginate @users %>
+</div>
+<div id="scrolling">
+  <div id="loading"><img src="/ajax-loader.gif" alt="Loading..."></div>
+  <%= will_paginate @users %>
+</div>

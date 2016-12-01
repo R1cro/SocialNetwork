@@ -1,0 +1,30 @@
+<ol id="replies-<%= micropost.id %>">
+  <% if micropost.replies.any? %>
+    <% micropost.replies.each do |reply| %>
+      <li id="reply-<%= reply.id %>">
+        <%= link_to avatar_for(reply.user, 65), reply.user %>
+        <h4 class="reply-owner"><%= link_to reply.user.email , reply.user %></h4>
+        <span class="reply-content"><%= process_content(reply) %></span>
+        <div class="reply-image"><%= image_tag reply.image.url if reply.image? %></div>
+        <span class="timestamp">
+          Reply <%= time_ago_in_words(reply.created_at) %> ago.
+        <span class="remove-reply">
+        <% if current_user?(reply.user) %>
+          <%= link_to micropost_reply_path(reply.id), method: :delete, remote: true,
+                     data: { confirm: "Remove your reply?" },
+                     class: 'reply-delete-link' do %>
+            <i class="fa fa-lg fa-trash"></i>
+          <% end %>
+        <% end %>
+        </span>
+        </span>
+      </li>
+    <% end %>
+  <% else %>
+    <div class="empty-zone">
+      <hr>
+      <h4>NO REPLIES</h4>
+      <hr>
+    </div>
+  <% end %>
+</ol>

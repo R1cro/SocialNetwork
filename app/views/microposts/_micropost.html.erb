@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <li id="micropost-<%= micropost.id %>">
-      <%= link_to avatar_for(micropost.user, 80), micropost.user %>
+      <%= link_to avatar_for(micropost.user, 0), micropost.user %>
       <% if micropost.user.user_profile.first_name.nil? %>
         <h4 class="post-owner"><%= link_to micropost.user.email , micropost.user %></h4>
       <% else %>
@@ -9,23 +9,35 @@
       <% end %>
       <span class="content"><%= process_content(micropost) %></span>
       <div class="post-image"><%= image_tag micropost.image.url if micropost.image? %></div>
-      <div class="like-panel">
-        <%= render 'microposts/like_form', micropost: micropost %>
-        <%= render 'microposts/likes', micropost: micropost  %>
-        <%= render 'microposts/post_likers', micropost: micropost %>
+      <div class="like-panel row">
+        <div class="like-form col-sm-2">
+          <%= render 'microposts/like_form', micropost: micropost %>
+          <%= render 'microposts/likes', micropost: micropost  %>
+        </div>
+        <div><%= render 'microposts/post_likers', micropost: micropost %> </div>
       </div >
-      <span class="timestamp">
-        Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-       <span class="remove-post">
-         <% if current_user?(micropost.user) %>
-           <%= link_to micropost, method: :delete,
-                                  data: { confirm: "Remove your post?" },
-                                  class: 'post-delete-link' do %>
-             <i class="fa fa-lg fa-trash"></i>
-           <% end %>
-         <% end %>
-       </span>
+      <span class="timestamp">Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+        <span class="remove-post">
+        <% if current_user?(micropost.user) %>
+          <%= link_to micropost, method: :delete,
+                                data: { confirm: 'Remove your post?' },
+                                class: 'post-delete-link' do %>
+          <i class="fa fa-lg fa-trash"></i>
+          <% end %>
+        <% end %>
+        </span>
       </span>
+      <% if logged_in? %>
+        <hr><button onclick="toggleReply(<%= micropost.id %>)" id="show-replies-<%= micropost.id %>" class="toggle"><i class="fa fa-reply" aria-hidden="true"></i> REPLY</button>
+        <div id="reply-to-micropost-<%= micropost.id %>">
+          <hr>
+          <div class="replies-panel">
+            <%= render 'replies/reply', micropost: micropost %>
+          </div>
+          <hr>
+          <%= render 'replies/reply_form', micropost: micropost %>
+        </div>
+      <% end %>
     </li>
   </div>
 </div>

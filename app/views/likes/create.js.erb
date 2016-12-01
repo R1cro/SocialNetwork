@@ -1,4 +1,4 @@
-$("#likes-form-<%= @micropost.id %>").html("<%= escape_javascript(render 'microposts/unlike', micropost: @micropost )%>");
+$("#likes-form-<%= @micropost.id %>").html("<%= escape_javascript(render 'microposts/unlike', micropost: @micropost ) %>");
 $("#like-count-<%= @micropost.id %>").html(
   '<% if @micropost.likes.count != 0 %>' +
     '<span class="badge liked">' +
@@ -7,3 +7,4 @@ $("#like-count-<%= @micropost.id %>").html(
   '<% else %>' +
     '<span class="badge"><%= @micropost.likes.count %></span>' +
   '<% end %>');
+$("#liker-avatars-<%= @micropost.id %>").hide().fadeIn(1000).html("<%= escape_javascript(render 'microposts/post_likers', micropost: @micropost) %>");
