@@ -1,12 +1,13 @@
 <div class="micropost-form">
-  <%= form_for(@micropost, html: { multipart: true }) do |f| %>
+  <%= form_for(@micropost, html: { multipart: true, class: 'dropzone', id: 'micropost-dropzone' }) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
-    <div class="post-field">
-      <%= f.text_area :content, placeholder: 'Compose new micropost...', class: 'form-control', rows: 2 %>
+    <div id="dropzone-area" class="post-field">
+      <%= f.text_area :content, placeholder: 'Compose new micropost or drop some images (max: 3)', id: 'dropzone-textarea', class: 'form-control', rows: 2 %>
+      <button class='btn btn-default' id="dropzone-upload">Cloudinary</button>
     </div>
-    <span class="image">
-      <%= f.file_field(:image) %>
-    </span>
+    <!--<span class="image">-->
+      <!--<%# f.file_field(:image) %>-->
+    <!--</span>-->
     <%= f.submit 'Post', class: 'btn btn-primary' %>
   <% end %>
 </div>

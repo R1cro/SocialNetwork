@@ -1,0 +1,9 @@
+$('#users-follow').append('<%= j render(@users) %>');
+<% if @users.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@users) %>');
+  $('#loading').hide();
+<% else %>
+  $('.pagination').remove();
+  $('#loading').remove();
+<% end %>
+<% sleep 1 %>
