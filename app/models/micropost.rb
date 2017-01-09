@@ -1,14 +1,12 @@
 class Micropost < ApplicationRecord
-  HASHTAG_REGEX = /(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/i
-
-  before_create :save_hashtags
+  include Hashtags
 
   belongs_to :user
 
   has_many :likes, dependent: :destroy
   has_many :replies, dependent: :destroy
+  # has_one :image, dependent: :destroy
 
-  acts_as_taggable_on :tags
   default_scope -> { order(created_at: :desc) }
   mount_uploader :image, ImageUploader
 
@@ -21,19 +19,10 @@ class Micropost < ApplicationRecord
   end
 
   private
-  def save_hashtags
-    tags = self.content.scan(HASHTAG_REGEX)
-    self.tag_list.add(tags)
-  end
-
   def image_size
     if image.size > 10.megabyte
       errors.add(:image, 'Image size should be less than 10 MB!')
     end
   end
 
-  def self.tag_counts
-    Tag.select("tags.*, count(taggings.tag_id) as count").
-      joins(:taggings).group("taggings.tag_id")
-  end
 end

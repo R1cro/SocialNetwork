@@ -18,16 +18,17 @@
     <% end %>
   </aside>
   <div class="col-md-7">
-    <div class="container">
-      <h5>
-        User posts <span class="badge"><%= @user.microposts.count %></span>
-      </h5>
-    </div>
+    <h5>
+      User posts <span class="badge"><%= @user.microposts.count %></span>
+    </h5>
     <% if @user.microposts.any? %>
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
-      <%= will_paginate @microposts %>
+      <div id="scrolling">
+        <div id="loading"><img src="/ajax-loader.gif" alt="Loading..."></div>
+        <%= will_paginate @microposts %>
+      </div>
     <% else %>
       <div class="empty-zone">
         <hr>

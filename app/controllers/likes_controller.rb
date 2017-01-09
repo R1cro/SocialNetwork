@@ -3,7 +3,7 @@ class LikesController < ApplicationController
 
   def show
     users_liked = Like.select(:user_id).where(micropost_id: params[:micropost_id])
-    @users = User.where(id: users_liked).paginate(page: params[:page], :per_page => 10)
+    @users = User.where(id: users_liked).paginate(page: params[:page], :per_page => 5)
   end
 
   def create

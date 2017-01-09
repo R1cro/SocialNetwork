@@ -17,9 +17,11 @@
 //= require bootstrap
 //= require moment
 //= require bootstrap-datetimepicker
+//= require dropzone
 //= require_tree .
 
 document.addEventListener("turbolinks:load", function() {
+
     $('.datepicker').datetimepicker({
         format: "DD/MM/YYYY",
         icons: {
@@ -27,4 +29,40 @@ document.addEventListener("turbolinks:load", function() {
             next: "fa fa-arrow-right"
         }
     });
-})
+
+    $("div[id|='reply-to-micropost']").hide()
+    window.toggleReply = function (id) {
+        $("#reply-to-micropost-" + id.toString()).slideToggle(500);
+    }
+
+    // FF
+    $(window).on('DOMMouseScroll', function (e) {
+        var url = $('.pagination .next_page a').attr('href');
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && url &&
+            e.originalEvent.detail > 0) {
+            document.getElementById("loading").style.display = 'block';
+            $('.pagination').html('<h4>Loading...</h4>');
+            $.getScript(url);
+        }
+        return;
+    });
+
+    // Chrome
+    $(window).on('mousewheel', function (e) {
+        var url = $('.pagination .next_page a').attr('href');
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && url &&
+            e.originalEvent.wheelDelta < 0) {
+            document.getElementById("loading").style.display = 'block';
+            $('.pagination').html('<h4>Loading...</h4>');
+            $.getScript(url);
+        }
+        return;
+    });
+
+    var mediaDropzone;
+    mediaDropzone = new Dropzone("#media-dropzone");
+    return mediaDropzone.on("success", function(file, responseText) {
+        var imageUrl;
+        imageUrl = responseText.file_name.url;
+    });
+});

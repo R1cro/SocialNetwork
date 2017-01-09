@@ -1,4 +1,19 @@
-<h1>#<%= @tag.name %></h1>
-<ol class="microposts">
-  <%= render @micropost %>
+<ol id="tagged-list">
+<h4>#<%= @tag.name %></h4>
+<div class="panel panel-default">
+  <div class="panel-body">
+  <% @tagged.each do |tagged| %>
+    <li id="tagged-<%= tagged.id %>">
+      <%= link_to avatar_for(tagged.user, 65), tagged.user %>
+      <h4 class="tag-owner"><%= link_to tagged.user.email, tagged.user %></h4>
+      <span class="tag-content"><%= process_content(tagged) %></span>
+      <div class="tag-image"><%= image_tag tagged.image.url if tagged.image? %></div>
+      <span class="timestamp">
+        Created <%= time_ago_in_words(tagged.created_at) %> ago.
+      </span>
+    </li>
+    <hr>
+  <% end %>
+  </div>
+</div>
 </ol>

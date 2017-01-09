@@ -1,4 +1,6 @@
 class Reply < ApplicationRecord
+  include Hashtags
+
   belongs_to :micropost
   belongs_to :user
 

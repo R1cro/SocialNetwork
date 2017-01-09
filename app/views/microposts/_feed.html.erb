@@ -1,11 +1,12 @@
 <% if @feed_items.any? %>
-  <div class="container">
-    <h5>Last users posts</h5>
-    </div>
+  <h5>Last users posts</h5>
   <ol class="microposts">
     <%= render @feed_items %>
   </ol>
   <% if logged_in? %>
-    <%= will_paginate @feed_items %>
+    <div id="scrolling">
+      <div id="loading"><img src="/ajax-loader.gif" alt="Loading..."></div>
+      <%= will_paginate @feed_items %>
+    </div>
   <% end %>
 <% end %>

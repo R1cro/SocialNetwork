@@ -7,3 +7,5 @@ $("#like-count-<%= @micropost.id %>").html(
   '<% else %>' +
     '<span class="badge"><%= @micropost.likes.count %></span>' +
   '<% end %>');
+$("#liker-avatars-<%= @micropost.id %>").hide().fadeIn(1000).html("<%= escape_javascript(render 'microposts/post_likers', micropost: @micropost) %>");
+
