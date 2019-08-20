@@ -59,6 +59,7 @@ document.addEventListener("turbolinks:load", function() {
         return;
     });
 
+
     if (document.getElementById('micropost-dropzone')) {
         var imageDropzone = new Dropzone(document.getElementById('dropzone-area'), {
             url: 'https://api.cloudinary.com/v1_1/r1cro-socialnetwork/image/upload',
