@@ -1,8 +1,8 @@
 <% provide(:title, 'All users') %>
 <h1>All users</h1>
-  <ol class="users">
+  <div class="users">
     <%= render @users.sort { |a,b| a.email.downcase <=> b.email.downcase } %>
-  </ol>
+  </div>
   <div id="scrolling">
     <div id="loading"><img src="/ajax-loader.gif" alt="Loading..."></div>
     <%= will_paginate  @users %>
